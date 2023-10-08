@@ -1,8 +1,9 @@
 import './App.css'
+import Layout from './layout/Layout'
 
 export default function App() {
   return (
-
+    <>
     <body>
       <nav className='bg-yellow-700 h-14 py-2 px-3 flex justify-between'>
         <img className='h-8' src="../public/image/hamburgerMenu.png" alt="hamburger_menu" />
@@ -11,7 +12,6 @@ export default function App() {
           <img className='h-10' src="../public/image/maleta.png" alt="maleta" />
         </div>
       </nav>
-
 
       <main>
         <h2 className='text-xs cursor-pointer'>Categoría</h2>
@@ -139,5 +139,9 @@ export default function App() {
     </body>
 
 
+   <div className='bg-red-200'>
+       <Layout/>
+   </div>
+   </>
   )
 }
