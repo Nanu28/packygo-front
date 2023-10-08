@@ -23,7 +23,7 @@ function Nav() {
         {role > 0 ? <div className='flex p-3 justify-evenly'>
           <img className='h-16 m-3' src={perfil} alt="" />
           <img className='h-16 m-3' src={carro} alt="" />
-        </div> : <p> Sign In</p>}
+        </div> : <p> Login</p>}
       </div>
       <DrawerMenu isOpen={open} onClose={() => setOpen(false)} />
 

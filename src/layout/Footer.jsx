@@ -9,7 +9,7 @@ import correo from '../../public/image/correo.png'
 
 function Footer() {
   return (
-    <div className=' bg-gradient-to-b from-cyan-500 to-cyan-800 min-h-1/4 w-full flex justify-around '>
+    <div className=' bg-gradient-to-b from-cyan-500 to-cyan-800 min-h-1/4 w-full  justify-around flex flex-col'>
       <div className=' flex flex-col w-1/3 h-auto justify-around m-4 font-semibold text-xl'>
         INFORMACION:
         <Link className='flex items-center font-semibold text-lg'>Preguntas Frecuentes</Link>
