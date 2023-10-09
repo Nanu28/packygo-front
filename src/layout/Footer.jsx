@@ -9,14 +9,14 @@ import correo from '../../public/image/correo.png'
 
 function Footer() {
   return (
-    <div className=' bg-gradient-to-b from-cyan-500 to-cyan-800 min-h-1/4 w-full  justify-around flex flex-col md:flex-row'>
-      <div className=' flex flex-col w-full md:min-w-1/3 h-auto justify-around m-4 font-semibold text-xl'>
+
+    <div className='footerColor min-h-1/4 w-full flex flex-col md:flex-row justify-around '>
+      <div className=' flex flex-col w-1/3 h-auto justify-around m-4 font-semibold text-xl'>
         INFORMACION:
         <Link className='flex items-center font-semibold text-lg'>Preguntas Frecuentes</Link>
         <Link className='flex items-center font-semibold text-lg'>Recomendaciones</Link>
         <Link className='flex items-center font-semibold text-lg'>Terminos y condiciones</Link>
         <Link className='flex items-center font-semibold text-lg'>Locales</Link>
-
       </div>
       <div className=' flex flex-col w-full md:min-w-1/3 h-auto justify-around m-4'>
         <p className=' font-semibold text-xl'> CONCTACTOS:</p>

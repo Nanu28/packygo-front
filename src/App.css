@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .navColor {
+        background-color: #BF894C;
+    }
+
+    .footerColor {
+        background-color: #D8E0DC;
+    }
+
+    .bgYellow{
+        background-color: #FEC600;
+    }
+}
