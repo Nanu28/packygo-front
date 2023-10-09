@@ -4,6 +4,7 @@ import Index from '../page/Index.jsx'
 import Layout from "../layout/Layout.jsx"
 import Register from "../page/Register.jsx"
 import Store from "../page/Store.jsx"
+import Details from "../page/Details.jsx"
 
 
 const Router = createBrowserRouter([
@@ -17,6 +18,7 @@ const Router = createBrowserRouter([
                 path: '/',
                 element: <Index />
             },
+
             {
                 path: '/register',
                 element: <Register />
@@ -24,6 +26,12 @@ const Router = createBrowserRouter([
             {
                 path: '/store',
                 element: <Store />
+
+
+            {
+                path: '/details',
+                element: <Details />
+
             },
            
         ]
