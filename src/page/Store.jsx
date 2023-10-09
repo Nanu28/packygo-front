@@ -1,7 +1,5 @@
 import ProductCards from '../components/ProductCards.jsx'
 
-
-
 function Store() {
   return (
     <div className='flex'>
