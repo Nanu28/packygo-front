@@ -3,7 +3,7 @@ import perfil from '../../public/image/perfilFem.png';
 import Display from '../components/Display.jsx';
 
 const DrawerMenu = ({ isOpen, onClose }) => (
-    <div className={`bg-gradient-to-r from-yellow-200 to-cyan-400 w-full h-full md:w-1/3 absolute top-0 left-0 z-40 ${isOpen ? 'block' : 'hidden'}`}>
+    <div className={`footerColor w-full h-full md:w-1/3 absolute top-0 left-0 z-40 ${isOpen ? 'block' : 'hidden'}`}>
         <div className='flex flex-col items-start pl-4'>
 
             <div className='w-full flex items-center justify-between '>
