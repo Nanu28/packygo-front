@@ -15,14 +15,14 @@ function Nav() {
 
   return (
     <>
-      <div className='w-full flex items-center justify-between	 bg-gradient-to-b from-yellow-300 to-yellow-700" h-18'>
+      <div className='navColor w-full flex items-center justify-between h-16'>
         <div className='flex w-full '>
-          <img onClick={() => setOpen(!open)} className='h-14 cursor-pointer m-5' src={menu} alt="menu" />
+          <img onClick={() => setOpen(!open)} className='h-12 cursor-pointer m-5' src={menu} alt="menu" />
         </div>
 
         {role > 0 ? <div className='flex p-3 justify-evenly'>
-          <img className='h-16 m-3' src={perfil} alt="" />
-          <img className='h-16 m-3' src={carro} alt="" />
+          <img className='h-12 m-3 cursor-pointer' src={perfil} alt="" />
+          <img className='h-12 m-3 cursor-pointer' src={carro} alt="" />
         </div> : <p> Sign In</p>}
       </div>
       <DrawerMenu isOpen={open} onClose={() => setOpen(false)} />
