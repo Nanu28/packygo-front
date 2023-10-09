@@ -8,7 +8,7 @@ const Display = () => {
       <ButtonNav to="/" title="Home" />
       <ButtonNav to="/" title="Login" />
       <ButtonNav to="/register" title="Register" />
-      <ButtonNav to="/" title="Shop" />
+      <ButtonNav to="/store" title="Store" />
 
     </div>
   )
