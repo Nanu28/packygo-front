@@ -1,4 +1,7 @@
-import ProductCards from '../components/ProductCards.jsx';
+
+import ProductCards from '../components/ProductCards.jsx'
+import { Link } from 'react-router-dom';
+import Products from '../components/Products/Products.jsx';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -38,6 +41,7 @@ function Store() {
   }, []);
 
   return (
+
     <div className='flex w-full min-h-screen bg-green-700 flex-wrap '>
       <section className='bg-red-300 w-full h-200 flex flex-col items-center'>
         <h1 className='text-4xl p-4'>Products</h1>

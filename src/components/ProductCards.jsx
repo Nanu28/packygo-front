@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import img from '../../public/image/maleta.png';
 import maleta from '../../public/image/maleta1.png';
@@ -109,5 +110,6 @@ function ProductCards(props) {
     </section>
   );
 }
+
 
 export default ProductCards;
