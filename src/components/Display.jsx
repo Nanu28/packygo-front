@@ -9,6 +9,8 @@ const Display = () => {
       <ButtonNav to="/login" title="Login" />
       <ButtonNav to="/register" title="Register" />
       <ButtonNav to="/store" title="Store" />
+      <ButtonNav to="/admin" title="Admin" />
+
 
     </div>
   )
