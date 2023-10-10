@@ -6,6 +6,7 @@ import Register from "../page/Register.jsx"
 import Store from "../page/Store.jsx"
 import Login from "../page/Login.jsx"
 import Details from "../page/Details.jsx"
+import Admin from "../page/Admin.jsx"
 
 
 
@@ -37,6 +38,11 @@ const Router = createBrowserRouter([
             {
                 path: '/details',
                 element: <Details />
+
+            },
+            {
+                path: '/admin',
+                element: <Admin />
 
             },
             
