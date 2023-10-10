@@ -28,7 +28,7 @@ function Index() {
 
         <div className="w-full flex-col flex md:flex-row justify-around items-center bg-tramsparent">
           <div className="md:w-1/2 m-5 bg-tramsparent rounded-lg shadow">
-            <div className="p-5">
+            <div >
               <div className="min-h-full flex flex-col items-center bg-gradient-to-b from-cyan-100 to-cyan-300 ">
                 <p className="mb-2 text-xl font-bold tracking-wide text-gray-900">
                   Sobre nosotros
@@ -53,7 +53,7 @@ function Index() {
           </div>
 
           <div className="md:w-1/2 m-5  bg-tramsparent rounded-lg shadow">
-            <div className="p-5">
+            <div >
               <div className="min-h-full flex flex-col items-center bg-gradient-to-b from-cyan-100 to-cyan-300 ">
                 <p className="mb-2 text-xl font-bold tracking-wide text-gray-900 ">
                   Calificaciones de clientes

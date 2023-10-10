@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useRef } from 'react';
 import axios from 'axios';
 
-const Register = () => {
+const Login = () => {
 
     const email = useRef();
     const password = useRef();
@@ -35,7 +35,7 @@ const Register = () => {
                     <div className="w-1/2 pl-4">
                         <div >
                             <p className="text-center text-2xl font-bold text-black">
-                            Welcome to the registry!
+                            Welcome to login!
                             </p>
                         </div>
                         <form className="mt-8" onSubmit={handleRegisterSubmit}>
@@ -68,7 +68,7 @@ const Register = () => {
                                 <div className='flex justify-center '>
                                     <button
                                         className='p-3 m-3 font-bold text-black ml-5  w-28 bg-yellow-400 rounded-full'
-                                        type="submit">Register
+                                        type="submit">Login
                                     </button>
                                 </div>
 
@@ -81,4 +81,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;

@@ -15,11 +15,12 @@ const CommentsDetail = ({ showComments }) => {
           type="button"
           onClick={toggleComments}
         >
-          Comentarios
+          Comments
         </button>
         <div className={`accordion-collapse ${isCommentsVisible ? 'show' : 'collapse'}`} id="flush-collapseOne">
           <div className="accordion-body pl-10 border-t border-gray-300 mb-4">
-            <p>Por Usuario 1</p>
+            <p>
+By user 1</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -33,7 +34,8 @@ const CommentsDetail = ({ showComments }) => {
           </div>
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
-            <p className='mt-3'>Por Usuario 2</p>
+            <p className='mt-3'>
+By user 2</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -45,7 +47,8 @@ const CommentsDetail = ({ showComments }) => {
           </div>
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
-            <p className='mt-3'>Por Usuario 3</p>
+            <p className='mt-3'>
+By user 3</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />

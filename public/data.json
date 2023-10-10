@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "On The Road",
+        "author": "Jack Kerouac",
+        "price": 10,
+        "img": "https://imgs.search.brave.com/vD-6MN8dWhKbGFwIItokAwqxvGzm_lYayonhuypL3uY/
+        rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMTYw/NTduMzU0cXlvNC5j/bG91ZGZyb250Lm5l/dC85NzgwMTQwMDQy/
+        NTk3LmpwZz9uZXh0/RXh0ZW5zaW9uPXdl/YnA"
+    },
+    {
+        "id": 2,
+        "name": "The Subterraneans",
+        "author": "Jack Kerouac",
+        "price": 20,
+        "img": "https://imgs.search.brave.com/2YuTc8MjqF6af7wYJm1PB7vXQiSmCnfzRzAgTDr_A0I/
+        rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/dGhyaWZ0Ym9va3Mu/Y29tL2FwaS9pbWFn/ZXMvaS9tLzNFRjg3/
+        Q0I2NkMyNjk5MUY5/QzUzMkFDRjJBNzJF/NEFEMTAwMTI3MTku/anBn"
+    },
+    {
+        "id": 3,
+        "name": "El Principito",
+        "author": "Alexoipsjvm",
+        "price": 30,
+        "img": "https://imgs.search.brave.com/vD-6MN8dWhKbGFwIItokAwqxvGzm_lYayonhuypL3uY/
+        rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMTYw/NTduMzU0cXlvNC5j/bG91ZGZyb250Lm5l/dC85NzgwMTQwMDQy/
+        NTk3LmpwZz9uZXh0/RXh0ZW5zaW9uPXdl/YnA"
+    },
+    {
+        "id": 4,
+        "name": "Sub Terra",
+        "author": "Baldomero Lillo",
+        "price": 44,
+        "img": "https://imgs.search.brave.com/2YuTc8MjqF6af7wYJm1PB7vXQiSmCnfzRzAgTDr_A0I/
+        rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/dGhyaWZ0Ym9va3Mu/Y29tL2FwaS9pbWFn/ZXMvaS9tLzNFRjg3/
+        Q0I2NkMyNjk5MUY5/QzUzMkFDRjJBNzJF/NEFEMTAwMTI3MTku/anBn"
+    },
+]

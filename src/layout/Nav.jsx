@@ -4,6 +4,7 @@ import menu from '../../public/image/MenuHamb.png'
 import perfil from '../../public/image/perfilFem.png'
 import carro from '../../public/image/carritomaleta.png'
 import DrawerMenu from '../components/DrawerMenu.jsx';
+import { Link } from 'react-router-dom';
 
 
 function Nav() {
@@ -20,12 +21,10 @@ function Nav() {
           <img onClick={() => setOpen(!open)} className='h-12 cursor-pointer m-5' src={menu} alt="menu" />
         </div>
 
-        {role > 0 ? <div className='flex p-3 justify-evenly'>
-
-          <img className='h-12 m-3 cursor-pointer' src={perfil} alt="" />
-          <img className='h-12 m-3 cursor-pointer' src={carro} alt="" />
-        </div> : <p> Sign In</p>}
-
+        {role > 0 ? <div className='flex p-3 justify-around'>
+          <img className='h-12 ' src={perfil} alt="" />
+          <Link to={'/cart'}><img className='h-12 ml-3' src={carro} alt="" /></Link>
+        </div> : <p> Login</p>}
       </div>
       <DrawerMenu isOpen={open} onClose={() => setOpen(false)} />
 

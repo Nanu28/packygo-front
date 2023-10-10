@@ -142,6 +142,27 @@ export default function App() {
    <div className='bg-red-200'>
        <Layout/>
    </div>
+   
    </>
   )
 }
+
+
+// import Nav from './layout/Nav'
+// import Index from './page/Index'
+// import Footer from './layout/Footer'
+// import { DataProvider } from "./components/Context/DataContext.jsx"
+
+
+
+// export default function App() {
+//   return (
+//     <>
+//       <DataProvider>
+//         <Nav />
+//         <Index />
+//         <Footer />
+//       </DataProvider>
+//     </>
+//   )
+// }
