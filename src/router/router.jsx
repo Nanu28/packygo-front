@@ -7,6 +7,7 @@ import Store from "../page/Store.jsx"
 import Login from "../page/Login.jsx"
 import Details from "../page/Details.jsx"
 import CartContent from "../components/CartContent/CartContent.jsx"
+import Admin from "../page/Admin.jsx"
 
 
 const Router = createBrowserRouter([
@@ -42,6 +43,11 @@ const Router = createBrowserRouter([
             {
                 path: '/cart',
                 element: <CartContent />
+            },
+            {  
+                path: '/admin',
+                element: <Admin />
+
 
             },
             

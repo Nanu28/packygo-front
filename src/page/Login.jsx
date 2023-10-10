@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
 import axios from 'axios';
+import { ChevronsLeft } from 'react-feather';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    let navigate = useNavigate()
 
     const email = useRef();
     const password = useRef();
-    const photo = useRef();
+    ChevronsLeft
 
     // Función para manejar el envío del formulario
     const handleRegisterSubmit = (e) => {
@@ -14,7 +17,7 @@ const Login = () => {
         let data = {
             email: email?.current?.value,
             password: password?.current?.value,
-            photo: photo?.current?.value,
+    
         };
 
  
@@ -48,14 +51,6 @@ const Login = () => {
                                         className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
                                     />
                                 </div>
-                                <div className="py-1">
-                                    <span className="px-1 text-sm text-gray-600">Photo URL</span>
-                                    <input
-                                        ref={photo}
-                                        type="text" // Cambiamos el tipo de input a "text" para cargar una URL de foto
-                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
-                                    />
-                                </div>
 
                                 <div className="py-1">
                                     <span className="px-1 text-sm text-gray-600">Password</span>
@@ -68,7 +63,7 @@ const Login = () => {
                                 <div className='flex justify-center '>
                                     <button
                                         className='p-3 m-3 font-bold text-black ml-5  w-28 bg-yellow-400 rounded-full'
-                                        type="submit">Login
+                                        type="submit" onClick={()=> {navigate('/')}} >Login
                                     </button>
                                 </div>
 
