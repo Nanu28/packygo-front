@@ -13,7 +13,10 @@ function ProductCards(props) {
   const [card, setCard] = useState([]);
   //console.log(card)
   const [selectedCardId, setSelectedCardId] = useState(null);
-  //console.log(props.searchText)
+  console.log(props.searchText)
+  console.log(props.searchCheck)
+
+
 
   const navigateToDetails = (cardId) => {
     navigate(`/details/${cardId}`);
@@ -41,16 +44,19 @@ function ProductCards(props) {
   };
 
   const getCard = async () => {
+    console.log(`Search Text: ${props.searchText}`);
+    console.log(`Search Check (Category): ${props.searchCheck}`);
+
     try {
       // Agregar el valor de búsqueda a la URL de la solicitud GET
-      const { data } = await axios.get(`http://localhost:8000/products?name=${props.searchText}`);
-      //console.log(data);
+      const { data } = await axios.get(`http://localhost:8000/products?name=${props.searchText}&category=${props.searchCheck}`);
+      console.log(data);
       setCard(data.products);
     } catch (error) {
       console.log(error.message);
     }
   };
-  
+
 
   useEffect(() => {
     // Filtrar las tarjetas según el texto de búsqueda
@@ -62,17 +68,17 @@ function ProductCards(props) {
     setCard(filteredCards);
 
   }, [props.searchText]);
-  
+
 
 
 
   return (
     <section className="flex flex-wrap gap-4 lg:p-10">
       {/* Card 1 */}
-    
+
       {card.map((card, _id) => (
-        
-        <div key={_id}  className="w-[290px] items-center bg-slate-300 flex flex-col rounded-lg">
+
+        <div key={_id} className="w-[290px] items-center bg-slate-300 flex flex-col rounded-lg">
           <div>
             <img className='rounded-lg h-72' src={card.photo} alt="" />
           </div>

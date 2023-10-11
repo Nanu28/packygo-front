@@ -9,12 +9,13 @@ function Store() {
   const [category, setCategory] = useState([]);
   const [text, setText] = useState('');
   const [check, setCheck] = useState([]);
-  //console.log(text)
+  console.log(text)
+  console.log(check)
 
   const getCategory = async () => {
     try {
       const response = await axios.get('http://localhost:8000/categories');
-      // console.log(response);
+       console.log(response);
       if (Array.isArray(response.data)) {
         setCategory(response.data);
       }
@@ -26,7 +27,6 @@ function Store() {
   const setFilters = (filterName, filterValue) => {
     if (filterName === 'text') {
       setText(filterValue);
-      // console.log(filterName)
     } else if (filterName === 'check') {
       if (!check.includes(filterValue)) {
         setCheck([...check, filterValue]);
@@ -35,7 +35,7 @@ function Store() {
       }
     }
   };
-
+  
   useEffect(() => {
     getCategory();
   }, []);
@@ -53,7 +53,7 @@ function Store() {
         />
       </section>
 
-      <section className='hidden lg:block w-72 h-screen mb-12 mt-12 bg-slate-300 text-xl p-3'>
+      <section className=' lg:block w-72 h-30 mb-12 mt-12 bg-slate-300 text-xl p-3'>
         <form action="">
           {category.map((category, index) => (
             <label htmlFor={category.name} className='mb-4' key={index}>
@@ -71,7 +71,9 @@ function Store() {
       </section>
 
       <div className='bg-amber-400 w-3/4 overflow-x-hidden'>
-        <ProductCards searchText={text} />
+        <ProductCards 
+        searchText={text} 
+        searchCheck={check} />
       </div>
     </div>
   );
