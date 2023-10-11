@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CommentsDetail = ({ showComments }) => {
+const CommentsDetail = ({ showComments }, {product}) => {
   const [isCommentsVisible, setIsCommentsVisible] = useState(false);
 
   const toggleComments = () => {

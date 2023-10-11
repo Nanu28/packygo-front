@@ -23,7 +23,14 @@ function Store() {
       console.error(error);
     }
   };
-
+  const checkeados = (id) => {
+    if (!check.includes(id)) {
+      setCheck([...check, id]);
+    } else {
+      setCheck(check.filter((category_id) => category_id !== id));
+    }
+  };
+  
   const setFilters = (filterName, filterValue) => {
     if (filterName === 'text') {
       setText(filterValue);
@@ -38,7 +45,7 @@ function Store() {
   
   useEffect(() => {
     getCategory();
-  }, []);
+  }, [text, check]);
 
   return (
 
@@ -55,10 +62,10 @@ function Store() {
 
       <section className=' lg:block w-72 h-30 mb-12 mt-12 bg-slate-300 text-xl p-3'>
         <form action="">
-          {category.map((category, index) => (
-            <label htmlFor={category.name} className='mb-4' key={index}>
+          {category.map((category) => (
+            <label htmlFor={category.name} className='mb-4' key={category._id}>
               <input
-                onClick={() => setFilters('check', category.name)}
+                onClick={() => setFilters('check', category._id)}
                 className='checked:bg-yellow-500'
                 type="checkbox"
                 name={category.name}
@@ -72,8 +79,8 @@ function Store() {
 
       <div className='bg-amber-400 w-3/4 overflow-x-hidden'>
         <ProductCards 
-        searchText={text} 
-        searchCheck={check} />
+        searchText={text.toString()} 
+        searchCheck={check.toString()} />
       </div>
     </div>
   );

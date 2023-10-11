@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const DescriptionDetails = ({ showComments, toggleComments }) => {
+const DescriptionDetails = ({ showComments, toggleComments, product }) => {
   const scrollToComments = () => {
     const commentsSection = document.getElementById('commentsSection');
     if (commentsSection) {
@@ -8,16 +8,20 @@ export const DescriptionDetails = ({ showComments, toggleComments }) => {
       toggleComments(); // Agrega esta línea para mostrar los comentarios cuando se hace clic en "Calificar"
     }
   };
+  if (!product) {
+    // Si product es null, no renderiza nada
+    return null;
+  }
 
   return (
     <section className='w-1/2 px-4 pt-14'>
-      <span>ID</span>
-      <p className='font-extrabold'>Yellow suitcase</p>
+      <span>ID: {product._id}</span>
+      <p className='font-extrabold'>{product.name}</p>
       <br />
       <p>Description:</p>
       <p className='italic'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi nam ipsum ea, eligendi sint illo reprehenderit quia, unde inventore ab voluptatum praesentium doloribus ad? Magni sunt dicta deserunt recusandae pariatur.
-      </p>
+         {product.description}    
+        </p>
 
       <div className='flex flex-col gap-2 mt-5 justify-items-center'>
         <p className='flex items-center'>Califications
@@ -30,13 +34,13 @@ export const DescriptionDetails = ({ showComments, toggleComments }) => {
         <p>Comments</p>
         <p onClick={scrollToComments} className='text-xs cursor-pointer'>Add comments</p>
         <div className='flex justify-center'>
-        <img className='w-1/2' src="../public/image/travel.png" alt="travel" />
+          <img className='w-1/2' src="../public/image/travel.png" alt="travel" />
         </div>
       </div>
     </section>
   );
 };
-
+export default DescriptionDetails;
 
 // import React from 'react'
 
