@@ -12,24 +12,21 @@ const Login = () => {
     ChevronsLeft
 
     // Función para manejar el envío del formulario
-    const handleRegisterSubmit = (e) => {
+    async function handleRegisterSubmit(e) {
         e.preventDefault();
-        let data = {
-            email: email?.current?.value,
-            password: password?.current?.value,
-    
-        };
-
- 
-        axios
-            .post("http://localhost:8000/auth/register", data)
-            .then((res) => {
-
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+        const data = {
+            email: email.current.value,
+            password: password.current.value,
+        }
+        try {
+          const credenciales = await axios.post("http://localhost:8000/users/login", data)
+            localStorage.setItem('token', credenciales.data.response.token)
+            localStorage.setItem('user', JSON.stringify(credenciales.data.response.user));
+           navigate('/')
+        } catch (error) {
+          console.log(error)
+        }
+      }
 
     return (
         <>
@@ -63,7 +60,7 @@ const Login = () => {
                                 <div className='flex justify-center '>
                                     <button
                                         className='p-3 m-3 font-bold text-black ml-5  w-28 bg-yellow-400 rounded-full'
-                                        type="submit" onClick={()=> {navigate('/')}} >Login
+                                        type="submit" >Login
                                     </button>
                                 </div>
 

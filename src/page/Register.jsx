@@ -17,11 +17,11 @@ const Register = () => {
             photo: photo?.current?.value,
         };
 
- 
-        axios
-            .post("http://localhost:8000/auth/register", data)
-            .then((res) => {
 
+        axios
+            .post("http://localhost:8000/users/register", data)
+            .then((res) => {
+                console.log(res)
             })
             .catch((error) => {
                 console.log(error);
@@ -35,7 +35,7 @@ const Register = () => {
                     <div className="w-1/2 pl-4">
                         <div >
                             <p className="text-center text-2xl font-bold text-black">
-                            Welcome to the registry!
+                                Welcome to the registry!
                             </p>
                         </div>
                         <form className="mt-8" onSubmit={handleRegisterSubmit}>
