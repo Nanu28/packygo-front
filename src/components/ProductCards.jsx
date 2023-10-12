@@ -32,7 +32,7 @@ function ProductCards(props) {
   const handleCancel = () => {
     setShowConfirmation(false);
   };
-  let array = [... props.searchCheck]
+  let array = [props.searchCheck]
   const getProducts = async () => {
     try {
       const { data } = await axios.get(`http://localhost:8000/products?name=${props.searchText}&category=${array}`);
