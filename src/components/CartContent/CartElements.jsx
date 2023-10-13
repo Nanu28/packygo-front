@@ -1,19 +1,32 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { DataContext } from "../Context/DataContext.jsx";
 
 const CartElements = () => {
-    const { cart, buyProduct } = useContext(DataContext);
+    const { cart, addProduct, removeProduct, productQuantities } = useContext(DataContext);
 
-    return cart.map((product) => {
-        return (
-            <div className="w-56 bg-slate-200 p-3 m-4 " key={product._id}>
-          <img src={product.photo} className="w-56 h-56" />
-          <h3>{product.name}</h3>
-          <h4>${product.price}</h4>
-         
+    return (
+        <div className="bg-slate-100 p-3">
+            <ul>
+                {cart.map((product) => (
+                    <li key={product._id}>
+                        {product.name}, ${product.price}, Quantity: {productQuantities[product._id] || 0}
+                        <button
+                            onClick={() => addProduct(product)}
+                            className="bg-blue-400 w-16 h-8 rounded-lg"
+                        >
+                            Add
+                        </button>
+                        <button
+                            onClick={() => removeProduct(product)}
+                            className="bg-blue-400 w-16 h-8 rounded-lg"
+                        >
+                            Subtract
+                        </button>
+                    </li>
+                ))}
+            </ul>
         </div>
-        );
-    });
+    );
 };
 
 export default CartElements;
