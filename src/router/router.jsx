@@ -8,9 +8,13 @@ import Login from "../page/Login.jsx"
 import Details from "../page/Details.jsx"
 import CartContent from "../components/CartContent/CartContent.jsx"
 import Admin from "../page/Admin.jsx"
+import SearchPage from "../page/SearchPage.jsx"
+import Pay from "../page/Pay.jsx"
 
 
-const Router = createBrowserRouter([
+
+
+const  Router = createBrowserRouter([
 
     {
         path: "/",
@@ -47,8 +51,15 @@ const Router = createBrowserRouter([
                 path: '/admin',
                 element: <Admin />
 
-
             },
+            {
+             path: '/search' ,
+             element: <SearchPage />
+            },
+            {
+                path: '/pay/:total' ,
+                element: <Pay/>
+           }
             
            
         ]

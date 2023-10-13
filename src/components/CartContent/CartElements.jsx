@@ -6,14 +6,12 @@ const CartElements = () => {
 
     return cart.map((product) => {
         return (
-            <div className="cartContent" key={product.id}>
-                <img src={product.img} alt="product-card" />
-                <h3 className="name">{product.name}</h3>
-                <h4 className="price">{product.price}$</h4>
-                <button onClick={() => buyProduct(product)} className="bg-blue-400 w-16 h-8 rounded-lg">
-                    Buy
-                </button>
-            </div>
+            <div className="w-56 bg-slate-200 p-3 m-4 " key={product._id}>
+          <img src={product.photo} className="w-56 h-56" />
+          <h3>{product.name}</h3>
+          <h4>${product.price}</h4>
+         
+        </div>
         );
     });
 };
