@@ -8,10 +8,10 @@ const CommentsDetail = ({ showComments }) => {
   };
 
   return (
-    <div className="accordion accordion-flush mt-5">
+    <div className="accordion accordion-flush">
       <div className="accordion-item" id="commentsSection">
         <button
-          className={`hover:bg-yellow-400 font-bold text-2xl pl-6 accordion-button ${isCommentsVisible ? '' : 'collapsed'}`}
+          className={`hover:bg-yellow-400 font-bold text-xl pl-6 accordion-button ${isCommentsVisible ? '' : 'collapsed'}`}
           type="button"
           onClick={toggleComments}
         >
@@ -20,7 +20,7 @@ const CommentsDetail = ({ showComments }) => {
         <div className={`accordion-collapse ${isCommentsVisible ? 'show' : 'collapse'}`} id="flush-collapseOne">
           <div className="accordion-body pl-10 border-t border-gray-300 mb-4">
             <p>
-By user 1</p>
+              By user 1</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -35,7 +35,7 @@ By user 1</p>
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
             <p className='mt-3'>
-By user 2</p>
+              By user 2</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -48,7 +48,7 @@ By user 2</p>
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
             <p className='mt-3'>
-By user 3</p>
+              By user 3</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />

@@ -7,6 +7,7 @@ export default function App() {
     <body>
       <nav className='bg-yellow-700 h-14 py-2 px-3 flex justify-between'>
         <img className='h-8' src="../public/image/hamburgerMenu.png" alt="hamburger_menu" />
+        <img className='h-8' src="../public/image/logoNav.png" alt="hamburger_menu" />
         <div className='flex gap-3'>
           <img className='h-10' src="../public/image/botonUsuario.png" alt="boton_usuario" />
           <img className='h-10' src="../public/image/maleta.png" alt="maleta" />

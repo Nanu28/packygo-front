@@ -1,9 +1,10 @@
+
 import React from 'react'
 
 const CarrouselDetails = () => {
   return (
     <div id="carouselExampleFade" className="carousel slide carousel-fade">
-    <div className="carousel-inner">
+    <div className="carousel-inner rounded-md">
       <div className="carousel-item active">
         <img src="/image/maleta1.png" className="d-block w-100" alt="maleta1" />
       </div>

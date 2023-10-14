@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Carousel from '../components/Carrousel.jsx'
 import Valoraciones from '../components/Valoraciones.jsx'
@@ -10,22 +11,24 @@ import img3 from '../../public/image/3.png'
 import img5 from '../../public/image/5.png'
 import prueba1 from '../../public/image/prueba1.png'
 import prueba2 from '../../public/image/prueba2.png'
+import BannerIndex from '../components/BannerIndex.jsx'
+import CategoriesIndex from '../components/CategoriesIndex.jsx'
+import VisionMision from '../components/visionMision.jsx'
 
 function Index() {
   return (
     <>
-      <div className="hidden md:block mb-5">
+      <BannerIndex />
+
+      <div className="hidden md:block">
         <Carousel autoSlide={true} autoSlideInterval={5000}>
-          {/* Aquí colocas las diapositivas que deseas mostrar */}
-          <img src={baner1} alt="" />
-          <img src={baner2} alt="" />
-          <img src={baner3} alt="" />
-          <img src={baner4} alt="" />
+          <img className='w-full' src="../public/image/carouselHome1.png" alt="carousel_banner1" />
+          <img className='w-full' src="../public/image/carouselHome2.png" alt="carousel_banner2" />
+          <img className='w-full' src="../public/image/carouselHome3.png" alt="carousel_banner3" />
         </Carousel>
       </div>
-      <div className="w-full h-full relative  bg-gradient-to-b from-cyan-100 to-cyan-300 ">
-        {/* Mostrar el carrusel solo en versiones de escritorio */}
 
+      {/* <section className="w-full h-full relative  bg-gradient-to-b from-cyan-100 to-cyan-300 ">
         <div className="w-full flex-col flex md:flex-row justify-around items-center bg-tramsparent">
           <div className="md:w-1/3 bg-tramsparent rounded-lg shadow">
             <div >
@@ -76,17 +79,23 @@ function Index() {
             </div>
           </div>
         </div>
-      </div>
+      </section> */}
+
+      <CategoriesIndex />
+
+      <VisionMision />
+
+
     </>
   )
 }
 
 export default Index
 
-/*   style={{
-    backgroundImage: `url('../../public/image/fondooo.png')`, // Reemplaza con la ruta correcta de tu imagen
-    backgroundSize: 'cover', // Ajusta el tamaño de la imagen
-    backgroundRepeat: 'no-repeat', // Evita que la imagen se repita
-    backgroundPosition: 'center', // Centra la imagen
+// /*   style={{
+//     backgroundImage: `url('../../public/image/fondooo.png')`, // Reemplaza con la ruta correcta de tu imagen
+//     backgroundSize: 'cover', // Ajusta el tamaño de la imagen
+//     backgroundRepeat: 'no-repeat', // Evita que la imagen se repita
+//     backgroundPosition: 'center', // Centra la imagen
     
-  }} */
+//   }} */

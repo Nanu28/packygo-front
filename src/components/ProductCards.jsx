@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useState } from 'react';
 import img from '../../public/image/maleta.png';
 import maleta from '../../public/image/maleta1.png';
@@ -7,16 +8,14 @@ import ConfirmationModal from '../components/ConfirmacionModal.jsx';
 import axios from 'axios';
 
 
+
 function ProductCards(props) {
   const navigate = useNavigate();
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [card, setCard] = useState([]);
   //console.log(card)
   const [selectedCardId, setSelectedCardId] = useState(null);
-  console.log(props.searchText)
-  console.log(props.searchCheck)
-
-
+  //console.log(props.searchText)
 
   const navigateToDetails = (cardId) => {
     navigate(`/details/${cardId}`);
@@ -44,13 +43,10 @@ function ProductCards(props) {
   };
 
   const getCard = async () => {
-    console.log(`Search Text: ${props.searchText}`);
-    console.log(`Search Check (Category): ${props.searchCheck}`);
-
     try {
       // Agregar el valor de búsqueda a la URL de la solicitud GET
-      const { data } = await axios.get(`http://localhost:8000/products?name=${props.searchText}&category=${props.searchCheck}`);
-      console.log(data);
+      const { data } = await axios.get(`http://localhost:8000/products?name=${props.searchText}`);
+      //console.log(data);
       setCard(data.products);
     } catch (error) {
       console.log(error.message);
@@ -70,42 +66,41 @@ function ProductCards(props) {
   }, [props.searchText]);
 
 
-
-
   return (
-    <section className="flex flex-wrap gap-4 lg:p-10">
+    <section className="flex flex-wrap justify-center gap-4 lg:p-10">
       {/* Card 1 */}
 
       {card.map((card, _id) => (
 
-        <div key={_id} className="w-[290px] items-center bg-slate-300 flex flex-col rounded-lg">
+        <div key={_id} className="w-72 h-fit items-center py-2 shadow-gray-950 shadow-md bg-sky-50 flex flex-col rounded-lg">
           <div>
-            <img className='rounded-lg h-72' src={card.photo} alt="" />
+            <img className='rounded-lg w-40 h-56 bg-cover' src={card.photo} alt="" />
           </div>
-          <div className="h-1/2  m-3 bg-red-200 rounded-lg">
-            <h2 className="text-center text-lg font-medium">{card.name}</h2>
+          <div className="h-10 rounded-lg">
+            <h2 className="text-center text-base font-semibold">{card.name}</h2>
             <p>{card.category.name}</p>
           </div>
-          <div className="flex justify-around items-center m-3">
-            <p className="text-xl bg-yellow-800 font-medium m-2">{card.price}</p>
+          <div className="flex justify-around items-center font-semibold gap-2">
             <button
-              className="bg-blue-400 w-20 h-10 text-xl font-normal p-2 rounded-lg"
+              className="bg-navbar-bg hover:bg-sky-900 text-white font-bold h-8 w-20 rounded-2xl mt-2"
               //onClick={() => handleAddClick(1)} // Pasa el ID de la tarjeta
               onClick={() => handleAddClick()}
             >
               Add
             </button>
             <button
-              className="bg-blue-400 w-20 h-10 text-xl font-normal p-2 ml-1 rounded-lg"
+              className="bg-navbar-bg hover:bg-sky-900 text-white font-bold h-8 w-20 rounded-2xl mt-2"
               onClick={() => navigate(`/details`)}
             >
               Details
             </button>
           </div>
+          <div className='flex items-center text-lg font-semibold'>
+            <p className="m-2"> $ {card.price}</p>
+          </div>
+
         </div>
       ))}
-
-
 
       <ConfirmationModal
         isOpen={showConfirmation}
@@ -116,6 +111,5 @@ function ProductCards(props) {
     </section>
   );
 }
-
 
 export default ProductCards;
