@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 const Admin = () => {
   return (
     <>
-
-      <div class="relative w-full h-48 bg-cover bg-center"
+      <div class="relative w-full h-36 bg-cover bg-center md:h-48"
         style={{ backgroundImage: `url('../../public/image/admin_banner.png')` }}>
-        <div class="flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-8 text-white z-10">
-          <p class="text-3xl text-slate-800">nice to see you again </p>
-          <p class="text-3xl text-slate-800">enjoy your</p>
-          <p class="text-lg text-yellow-500 font-bold">pack&Go trip</p>
-          <img className='w-10 mt-3' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+        <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
+          <p class="text-xl text-slate-800 md:text-3xl">Nice to see you again</p>
+          <p class="text-xl text-slate-800 md:text-3xl">enjoy your</p>
+          <p class="text-base text-yellow-500 font-bold md:text-lg">pack&Go trip</p>
+          <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
         </div>
       </div>
 
@@ -101,7 +100,7 @@ const Admin = () => {
 
               <div className='flex justify-center '>
                 <button
-                  className='p-3 m-3 font-bold text-white ml-5 w-28 bg-navbar-bg hover:bg-sky-900 rounded-full'
+                  className='p-3 m-3 font-bold text-white ml-5 w-28 bg-sky-800 hover:bg-yellow-600 rounded-full'
                   type="submit" onClick={() => { /* navigate('/') */ }} >go
                 </button>
               </div>

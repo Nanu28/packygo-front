@@ -35,13 +35,13 @@ const Login = () => {
 
     return (
         <>
-            <div class="relative w-full h-48 bg-cover bg-center"
+            <div class="relative w-full h-36 bg-cover bg-bottom md:h-48"
                 style={{ backgroundImage: `url('../../public/image/login_banner.png')` }}>
-                <div class="flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-8 text-white z-10">
-                    <p class="text-3xl text-slate-800">nice to see you again </p>
-                    <p class="text-3xl text-slate-800">enjoy your</p>
-                    <p class="text-lg text-yellow-500 font-bold">pack&Go trip</p>
-                    <img className='w-10 mt-3' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+                <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
+                    <p class="text-xl text-slate-800 md:text-3xl">Nice to see you again</p>
+                    <p class="text-xl text-slate-800 md:text-3xl">enjoy your</p>
+                    <p class="text-base text-yellow-500 font-bold md:text-lg">pack&Go trip</p>
+                    <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
                 </div>
             </div>
 
@@ -53,10 +53,10 @@ const Login = () => {
                 <Link className='font-semibold' to="#">/Login</Link>
             </div>
 
-            <div className="container max-w-full mx-auto bg-sky-100 md:py-24 px-6">
+            <div className="container max-w-full mx-auto py-4 bg-sky-100 md:py-24 px-6">
                 <div className="max-w-screen-xl mx-auto flex items-center justify-center">
-                    <div className="w-1/2 pl-4">
-                        <div >
+                    <div className="w-80 p-4 shadow-gray-950 shadow-md bg-sky-50 rounded-sm md:w-1/2">
+                        <div>
                             <p className="text-center text-2xl font-bold text-black">
                                 Welcome to login!
                             </p>
@@ -82,7 +82,7 @@ const Login = () => {
                                 </div>
                                 <div className='flex justify-center '>
                                     <button
-                                        className='p-3 m-3 font-bold text-white ml-5 w-28 bg-navbar-bg hover:bg-sky-900 rounded-full'
+                                        className='p-1 m-3 font-bold text-white ml-5 w-28 bg-sky-800 hover:bg-yellow-600 rounded-full md:p-3'
                                         type="submit" onClick={() => { navigate('/') }} >Login
                                     </button>
                                 </div>
