@@ -8,42 +8,19 @@ const DataProvider = ({ children }) => {
     const [data, setData] = useState([]);
     const [cart, setCart] = useState([]);
     const [productQuantities, setProductQuantities] = useState({});
+    console.log(cart)
 
-    const buyProduct = (product) => {
-        // Agregar el producto al carrito
-        setCart((prevCart) => [...prevCart, product]);
 
-        // Incrementar la cantidad del producto en el objeto de cantidades
-        setProductQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [product._id]: (prevQuantities[product._id] || 0) + 1,
-        }));
-    };
+  const buyProduct = (product) => {
+    const productrepeat = cart.find((item) => item._id === product._id);
 
-    const addProduct = (product) => {
-        // Incrementar la cantidad del producto en el objeto de cantidades
-        setProductQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [product._id]: (prevQuantities[product._id] || 0) + 1,
-        }));
-    };
+    if (productrepeat) {
+      setCart(cart.map((item) => (item._id === product._id ? { ...product, quanty: productrepeat.quanty + 1 } : item)));
+    } else {
+      setCart([...cart, product]);
+    }
+  };
 
-    const removeProduct = (product) => {
-        const productId = product._id;
-        const updatedQuantities = { ...productQuantities };
-        
-        if (updatedQuantities[productId] > 0) {
-            updatedQuantities[productId]--;
-            
-            if (updatedQuantities[productId] === 0) {
-                // Si la cantidad llega a cero, elimina el producto del carrito
-                const updatedCart = cart.filter((item) => item._id !== productId);
-                setCart(updatedCart);
-            }
-    
-            setProductQuantities(updatedQuantities);
-        }
-    };
 
     useEffect(() => {
         axios.get('http://localhost:8000/products')
@@ -57,7 +34,7 @@ const DataProvider = ({ children }) => {
     }, []);
 
     return (
-        <DataContext.Provider value={{ data, cart, setCart, buyProduct, addProduct, removeProduct, productQuantities }}>
+        <DataContext.Provider value={{ data, cart, setCart, buyProduct/*,  addProduct, removeProduct, productQuantities */ }}>
             {children}
         </DataContext.Provider>
     );

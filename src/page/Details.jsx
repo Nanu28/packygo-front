@@ -8,10 +8,11 @@ import Loader from '../components/Loader.jsx';
 
 const Details = () => {
   const { _id } = useParams();
-
   const [showComments, setShowComments] = useState(false);
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  
 
   useEffect(() => {
     // Realiza una solicitud al servidor para obtener los detalles del producto por su ID

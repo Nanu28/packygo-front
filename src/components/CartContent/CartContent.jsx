@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CartElements from "../CartContent/CartElements.jsx";
 import CartTotal from "../CartContent/CartTotal.jsx";
 
-const CartContent = () => {
+const CartContent = ({product}) => {
   const { cart } = useContext(DataContext);
 
   return (
@@ -18,18 +18,17 @@ const CartContent = () => {
         <Link className='font-semibold' to="#">/Cart</Link>
       </div>
 
-      {cart.length === 0 ? (
-        <div className="w-full bg-red-200 h-full text-center justify-center align-center">
-          <h2 className="text-2xl font-medium p-3">Your cart is empty</h2>
-        </div>
-      ) : (
-        <div className="w-full bg-red-200 h-full text-center justify-center align-center">
+      {cart.length > 0  ? (
+        <>
           <CartElements />
           <CartTotal />
-        </div>
+        </>
+      ) : (
+        <h2 className='cart-message-center'>Your cart is empty</h2>
       )}
     </>
   );
 };
 
 export default CartContent;
+
