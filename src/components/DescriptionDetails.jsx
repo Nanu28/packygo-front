@@ -10,7 +10,7 @@ export const DescriptionDetails = ({ showComments, toggleComments }) => {
   };
 
   return (
-    <section className='w-1/2 px-4 pt-14'>
+    <section className='py-2 px-10 md:w-2/4 md:px-4'>
       <span>ID</span>
       <p className='font-extrabold'>Yellow suitcase</p>
       <br />
@@ -27,10 +27,9 @@ export const DescriptionDetails = ({ showComments, toggleComments }) => {
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
         </p>
-        <p>Comments</p>
         <p onClick={scrollToComments} className='text-xs cursor-pointer'>Add comments</p>
-        <div className='flex justify-center'>
-        <img className='w-1/2' src="../public/image/travel.png" alt="travel" />
+        <div className='flex justify-center md:justify-end md:pr-20'>
+        <img className='w-1/3' src="../public/image/travel.png" alt="travel" />
         </div>
       </div>
     </section>
