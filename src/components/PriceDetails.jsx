@@ -10,7 +10,7 @@ export const PriceDetails = () => {
         <p className='hidden md:block md:text-center md:font-bold md:text-yellow-600'>Avalaible stock</p>
       </div>
       <div className='flex items-center justify-center gap-4'>
-      <p className='md:hidden text-center text-sm font-bold text-yellow-600'>Avalaible stock</p>
+      <p className='md:hidden text-center text-sm font-bold text-yellow-600'>Available stock</p>
       <button className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-semibold w-32 h-8 py-2 rounded-lg flex items-center justify-center md:px-4 md:text-lg md:w-full md:h-12">Add to cart</button>
       </div>
     </div>
