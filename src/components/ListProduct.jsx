@@ -21,7 +21,7 @@ export default ListProduct
 
 import React, { useContext } from 'react';
 import { ProductContext } from '../components/Context/ProductContext.jsx';
-import  CardProduct  from '../components/CardProduct.jsx';
+// import  CardProduct  from '../components/CardProduct.jsx';
 // import  Loader  from '../components/Loader.jsx';
 
 export const ListProduct = () => {
