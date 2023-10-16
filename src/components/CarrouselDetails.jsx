@@ -1,18 +1,19 @@
 
 import React from 'react'
 
-const CarrouselDetails = () => {
+const CarrouselDetails = ({product}) => {
+  console.log(product)
   return (
     <div id="carouselExampleFade" className="carousel slide carousel-fade">
     <div className="carousel-inner rounded-md">
       <div className="carousel-item active">
-        <img src="/image/maleta1.png" className="d-block w-100" alt="maleta1" />
+        <img src={product?.photo} className="d-block w-100" alt="maleta1" />
       </div>
       <div className="carousel-item">
-        <img src="/image/maleta2.png" className="d-block w-100" alt="maleta2" />
+        <img src={product?.photo} className="d-block w-100" alt="maleta2" />
       </div>
       <div className="carousel-item">
-        <img src="/image/maleta3.png" className="d-block w-100" alt="maleta3" />
+        <img src={product?.photo} className="d-block w-100" alt="maleta3" />
       </div>
     </div>
     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

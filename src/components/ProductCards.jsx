@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import ConfirmationModal from '../components/ConfirmacionModal.jsx';
 import axios from 'axios';
+import { DataContext } from "../Context/DataContext.jsx";
 
 function ProductCards(props) {
   const navigate = useNavigate();
@@ -9,6 +10,17 @@ function ProductCards(props) {
   const [card, setCard] = useState([]);
   const [selectedCardId, setSelectedCardId] = useState(null);
   const [pageNumber, setPageNumber] = useState(0);
+
+  const { data, cart, setCart } = useContext(DataContext);
+        setCard(data.products);
+
+        const buyProduct = (product) => {
+          setCart([...cart, product]);
+        };
+      
+        if (!Array.isArray(data) || data.length === 0) {
+          return <div>No hay datos disponibles.</div>;
+        }
 
   const navigateToDetails = (cardId) => {
     navigate(`/details/${cardId}`);
@@ -34,10 +46,10 @@ function ProductCards(props) {
     setShowConfirmation(false);
   };
 
-  const getCard = async () => {
+/*   const getCard = async () => {
     try {
       const { data } = await axios.get(`http://localhost:8000/products?name=${props.searchText}`);
-      setCard(data.products);
+
     } catch (error) {
       console.log(error.message);
     }
@@ -46,7 +58,7 @@ function ProductCards(props) {
   useEffect(() => {
     getCard();
   }, [props.searchText]);
-
+ */
   const productsPerPage = 9;
   const pagesVisited = pageNumber * productsPerPage;
   const displayedProducts = card.slice(pagesVisited, pagesVisited + productsPerPage);
@@ -86,7 +98,7 @@ function ProductCards(props) {
             <div className="flex justify-center items-center font-semibold gap-2">
               <button
                 className="bg-sky-800 hover:bg-yellow-600 text-white font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center" // Añadida clase "flex" y "justify-center"
-                onClick={() => handleAddClick(card.id)}
+                onClick={() => buyProduct(product)}
               >
                 Buy
               </button>
