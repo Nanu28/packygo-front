@@ -67,7 +67,7 @@ const Nav = () => {
   return (
     <>
       <div className='bg-yellow-600 bg-opacity-50 h-14 w-full flex items-center justify-between rounded-xl'>
-      <div className='flex items-center'>
+        <div className='flex items-center'>
           {isHamburgerButton ? (
             <img onClick={toggleDrawer} className='h-10 cursor-pointer pl-4' src={hamburguesa} alt="hamburger_menu" />
           ) : (
@@ -82,11 +82,13 @@ const Nav = () => {
         {role !== null ? (
           <div className='flex p-3 justify-around'>
             <Link to="/profile" className="flex items-center">
-              <img className='h-12' src={profile || "../public/image/botonUsuario.png"} alt="boton_usuario" />
+              <img className='h-12 w-12 rounded-xl' src={profile || "../public/image/botonUsuario.png"} alt="boton_usuario" />
             </Link>
-            <Link to={'/cart'}>
-              <img className='h-12 ml-3' src="../public/image/cartNav.png" alt="carro" />
-              {cart.length > 0 ? <TotalItems /> : null}
+            <Link to={'/cart'} className='flex items-center'>
+              <img className='h-12 md:ml-3' src="../public/image/cartNav.png" alt="carro" />
+              <div className="relative">
+                <TotalItems />
+              </div>
             </Link>
           </div>
         ) : (
@@ -98,16 +100,17 @@ const Nav = () => {
 
       <DrawerMenu isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
 
-      <header className="bg-red-600 h-18 flex justify-center items-center">
+      <header className="bg-sky-100 h-18 flex items-center justify-center md:justify-end">
         <form onSubmit={onSearchSubmit}>
           <div className="flex w-full h-10 bg-red-300">
             <input
+              className='px-3 border-3 border-sky-900'
               type="search"
               name="valueSearch"
               id=""
               value={valueSearch}
               onChange={onInputChange}
-              placeholder="Buscar un producto"
+              placeholder="Search here"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +118,7 @@ const Nav = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="icon-search w-5"
+              className="icon-search w-5 bg-sky-800"
             >
               <path
                 strokeLinecap="round"
@@ -123,7 +126,7 @@ const Nav = () => {
                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
               />
             </svg>
-            <button className="btn-search">Buscar</button>
+            <button className="btn-search pe-3 bg-sky-800 hover:bg-yellow-600 text-white text-base font-semibold">Search</button>
           </div>
         </form>
       </header>

@@ -4,7 +4,7 @@ import axios from 'axios';
 import PriceDetails from '../components/PriceDetails.jsx';
 import DescriptionDetails from '../components/DescriptionDetails.jsx';
 import CommentsDetail from '../components/CommentsDetail.jsx';
-import Loader from '../components/Loader.jsx';
+// import Loader from '../components/Loader.jsx';
 import CarrouselDetails from '../components/CarrouselDetails';
 import BannerIndex from '../components/BannerIndex';
 
@@ -15,7 +15,7 @@ const Details = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  
+
 
   useEffect(() => {
     // Realiza una solicitud al servidor para obtener los detalles del producto por su ID
@@ -39,9 +39,9 @@ const Details = () => {
   return (
     <>
 
-<div class="relative w-full h-36 bg-cover bg-center md:h-48"
+      <div class="relative w-full h-36 bg-cover bg-center md:h-48"
         style={{ backgroundImage: `url('../../public/image/details_banner.png')` }}>
-       <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
+        <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
           <p class="text-xl text-slate-800 md:text-3xl">We give you what you need to</p>
           <p class="text-xl text-slate-800 md:text-3xl">make</p>
           <p className="text-base text-yellow-500 font-bold md:text-lg"> the right decision</p>
@@ -62,10 +62,10 @@ const Details = () => {
       <div className='flex flex-col md:flex-row bg-sky-100'>
         <section className='px-6 py-2 md:w-1/3 md:ml-24 md:mr-10'>
           <CarrouselDetails product={product} />
-          <PriceDetails product={product}/>
+          <PriceDetails product={product} />
         </section>
 
-        <DescriptionDetails  product={product}  showComments={showComments} toggleComments={toggleComments} />
+        <DescriptionDetails product={product} showComments={showComments} toggleComments={toggleComments} />
       </div>
 
       <CommentsDetail showComments={showComments} />
@@ -84,58 +84,58 @@ import { Loader } from '../components';
 import { ProductContext } from '../context/ProductContext';
 
  const Details = () => {
-	const { getProductByID } = useContext(ProductContext);
+  const { getProductByID } = useContext(ProductContext);
 
-	const [loading, setLoading] = useState(true);
-	const [Product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [Product, setProduct] = useState({});
 
-	const { _id } = useParams();
+  const { _id } = useParams();
 
-	const fetchProduct = async id => {
-		const data = await getProductByID(_id);
-		setProduct(data);
-		setLoading(false);
-	};
+  const fetchProduct = async id => {
+    const data = await getProductByID(_id);
+    setProduct(data);
+    setLoading(false);
+  };
 
-	useEffect(() => {
-		fetchProduct(id);
-	}, []);
+  useEffect(() => {
+    fetchProduct(id);
+  }, []);
 
-	return (
-		<main className='container main-Product'>
-			{loading ? (
-				<Loader />
-			) : (
-				<>
-					<div className='header-main-Product'>
-						<span className='number-Product'>#{Product.id}</span>
-						<div className='container-img-Product'>
-							<img
-								src={Product.}
-								alt={`Product ${Product?.name}`}
-							/>
-						</div>
+  return (
+    <main className='container main-Product'>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className='header-main-Product'>
+            <span className='number-Product'>#{Product.id}</span>
+            <div className='container-img-Product'>
+              <img
+                src={Product.}
+                alt={`Product ${Product?.name}`}
+              />
+            </div>
 
-						<div className='container-info-Product'>
+            <div className='container-info-Product'>
 
-							<div className='info-Product'>
-								<div className='group-info'>
-									<p>Altura</p>
-									<span>{Product.description}</span>
-								</div>
+              <div className='info-Product'>
+                <div className='group-info'>
+                  <p>Altura</p>
+                  <span>{Product.description}</span>
+                </div>
 
-							</div>
-						</div>
-					</div>
+              </div>
+            </div>
+          </div>
 
-					<div className='container-stats'>
-						<h1>Estadísticas</h1>
-					</div>
+          <div className='container-stats'>
+            <h1>Estadísticas</h1>
+          </div>
 
-					</div>
-				</>
-			)}
-		</main>
-	);
+          </div>
+        </>
+      )}
+    </main>
+  );
 };
 export default Details;*/

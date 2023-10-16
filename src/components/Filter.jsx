@@ -8,57 +8,57 @@ import { Link } from 'react-router-dom';
 	const { active, handleCheckbox } = useContext(ProductContext);
 
 	return (
-		<div className={` flex-grow w-full bg-gray-200 text-gray-500 ${active ? 'active' : 'p-1 text-2xl font-medium my-2 mx-4'}`}>
-			<div className='flex flex-col md:flex-row items-center '>
+		<div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2 ${active ? 'active' : 'text-xl font-medium'}`}>
+			<div className='flex flex-col items-center justify-center gap-2 md:flex-row'>
 
-				<div className='p-1 text-2xl font-medium my-2 mx-4'>
+				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
 						type='checkbox'
 						onChange={handleCheckbox}
 						name='accesories'
 						id='accesories'
 					/>
-					<label htmlFor='accesories'>accesories</label>
+					<label htmlFor='accesories'>Accesories</label>
 				</div>
 
-				<div className='p-1 text-2xl font-medium my-2 mx-4'>
+				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
 						type='checkbox'
 						onChange={handleCheckbox}
 						name='waistpacks'
 						id='waistpacks'
 					/>
-					<label htmlFor='waistpacks'>waistpacks</label>
+					<label htmlFor='waistpacks'>Waistpacks</label>
 				</div>
-				<div className='p-1 text-2xl font-medium my-2 mx-4'>
+				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
 						type='checkbox'
 						onChange={handleCheckbox}
 						name='pets'
 						id='pets'
 					/>
-					<label htmlFor='pets'>pets</label>
+					<label htmlFor='pets'>Pets</label>
 				</div>
-				<div className='p-1 text-2xl font-medium my-2 mx-4'>
+				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
 						type='checkbox'
 						onChange={handleCheckbox}
 						name='backpacks'
 						id='backpacks'
 					/>
-					<label htmlFor='backpacks'>backpacks</label>
+					<label htmlFor='backpacks'>Backpacks</label>
 				</div>
-				<div className='p-1 text-2xl font-medium my-2 mx-4'>
+				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
 						type='checkbox'
 						onChange={handleCheckbox}
 						name='suitcases'
 						id='suitcases'
 					/>
-					<label htmlFor='suitcases'>suitcases</label>
+					<label htmlFor='suitcases'>Suitcases</label>
 				</div>
 
-				<Link to={'/cart'} className='p-1 w-20 my-2 mx-4'>
+				<Link to={'/cart'} className='p-1 w-14 md:w-20'>
 					<img src={carro} alt="" />
 				</Link>
 				

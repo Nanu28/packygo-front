@@ -17,15 +17,24 @@ const CartElements = () => {
 
     return cart.map((product) => {
         return (
-            <div className='flex justify-around items-center flex-wrap m-8 bg-red-500' key={product._id}>
-                <img src={product.photo} alt='product-card' className="h-32 w-32" />
-                <h3 className='name'>{product.name}</h3>
-                <CartItemsCounter product={product} />
-                <h4 className='price'>{product.price * product.quanty}$</h4>
-                <h3 class='cart-delete-button' onClick={() => deleteProduct(product._id)}>
-                    ❌
-                </h3>
+            <div className="">
+                <div className='flex flex-col justify-around items-center flex-wrap m-8 bg-white rounded-b-3xl shadow-gray-950 shadow-md gap-2 py-4 md:flex-row' key={product._id}>
+                    <img src={product.photo} alt='product-card' className="h-32 w-32" />
+                    <div className="flex flex-col gap-3">
+                        <h3 className='name font-semibold'>{product.name}</h3>
+                        <CartItemsCounter product={product} />
+                    </div>
+                    <div className="flex gap-6">
+                    <h4 className='price text-lg'>Subtotal</h4>
+                    <h4 className='price font-bold text-lg'>{product.price * product.quanty}$</h4>
+                    </div>
+                    
+                    <h3 class='cart-delete-button' onClick={() => deleteProduct(product._id)}>
+                        ❌
+                    </h3>
+                </div>
             </div>
+
         );
     });
 };

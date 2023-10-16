@@ -78,13 +78,13 @@ const Products = () => {
               <img className='rounded-lg w-40 h-56 bg-cover' src={card.photo} alt="" />
             </div>
             <div className="h-10 rounded-lg">
-              <h2 className="text-center text-base font-semibold">{card.name}</h2>
-              <p>{card.category.name}</p>
+              <h2 className="text-center text-sm font-semibold">{card.name}</h2>
+              <p className='text-sm italic capitalize'>{card.category.name}</p>
             </div>
             <div className="flex justify-center items-center font-semibold gap-2">
               {isUserLoggedIn() ? (
                 <button
-                  className="bg-sky-800 hover-bg-yellow-600 text-white font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
+                  className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
                   onClick={() => buyProduct(card)}
                 >
                   Buy
@@ -92,13 +92,13 @@ const Products = () => {
               ) : null}
               <Link
                 to={`/details/${card._id}`}
-                className="bg-sky-800 hover-bg-yellow-600 text-white font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
+                className="bg-sky-800 hover:bg-yellow-600 text-white font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
               >
                 Details
               </Link>
             </div>
             <div className='flex items-center text-lg font-semibold'>
-              <p className="m-2"> $ {card.price}</p>
+              <p className="mt-1"> $ {card.price}</p>
             </div>
           </div>
         ))}
@@ -109,7 +109,7 @@ const Products = () => {
           onGoToCart={handleGoToCart}
         />
       </section>
-      <div className="pagination flex justify-center pb-4">
+      <div className="pagination flex justify-center py-4 px-2 md:pb-4">
         <button
           onClick={() => changePage(pageNumber - 1)}
           disabled={pageNumber === 0}

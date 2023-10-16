@@ -24,14 +24,14 @@ const DescriptionDetails = ({ showComments, toggleComments, product }) => {
         </p>
 
       <div className='flex flex-col gap-2 mt-5 justify-items-center'>
-        <p className='flex items-center'>Califications
+        <p className='flex items-center text-base font-semibold'>Customer reviews
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
         </p>
-        <p onClick={scrollToComments} className='text-xs cursor-pointer'>Add comments</p>
+        <p onClick={scrollToComments} className='text-sm underline cursor-pointer'>Read reviews</p>
         <div className='flex justify-center md:justify-end md:pr-20'>
         <img className='w-1/3' src="../public/image/travel.png" alt="travel" />
         </div>
@@ -40,6 +40,7 @@ const DescriptionDetails = ({ showComments, toggleComments, product }) => {
   );
 };
 export default DescriptionDetails;
+
 
 // import React from 'react'
 
