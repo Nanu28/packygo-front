@@ -1,27 +1,37 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Display from '../components/Display.jsx';
 
-const DrawerMenu = ({ isOpen, onClose }) => (
-    <div className={`footerColor w-full h-full md:w-1/3 absolute top-0 left-0 z-40 ${isOpen ? 'block' : 'hidden'}`}>
-        <div className='flex flex-col items-start pl-4'>
+const DrawerMenu = ({ isOpen, onClose }) => {
+  // Ref para el DrawerMenu
+  const drawerRef = useRef(null);
 
-            <div className='w-full flex items-center justify-between '>
-                <button onClick={onClose} className='text-grey-400 bg-grey-200 p-1 mb-3 w-48 rounded-md font-bold text-2xl '>
-                    <span className="border border-black rounded-full px-2 py-1 m-7">
-                        X
-                    </span>
-                </button>
+  // Función para cerrar el DrawerMenu si se hace clic fuera de él
+  const closeMenuOnClickOutside = (event) => {
+    if (isOpen && drawerRef.current && !drawerRef.current.contains(event.target)) {
+      onClose(); // Llama a la función onClose para cerrar el DrawerMenu
+    }
+  };
 
-            </div>
+  // Agregar un efecto para el evento "mousedown" al montar el componente
+  useEffect(() => {
+    document.addEventListener('mousedown', closeMenuOnClickOutside);
 
+    return () => {
+      // Eliminar el event listener cuando el componente se desmonte
+      document.removeEventListener('mousedown', closeMenuOnClickOutside);
+    };
+  }, [isOpen]);
 
-            <div className='flex flex-col w-full justify-center items-center'>
-                <Display />
-
-            </div>
-
+  return (
+    <div className={`bg-slate-200 rounded-r-full bg-opacity-70 w-full h-full md:w-72 absolute top-18 left-0 z-40 ${isOpen ? 'block' : 'hidden'}`}>
+    
+      <div className='flex flex-col items-start'>
+        <div className='flex flex-col w-full justify-center items-center'>
+          <Display />
         </div>
+      </div>
     </div>
-);
+  );
+};
 
 export default DrawerMenu;

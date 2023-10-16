@@ -31,10 +31,9 @@ const DescriptionDetails = ({ showComments, toggleComments, product }) => {
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
           <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
         </p>
-        <p>Comments</p>
         <p onClick={scrollToComments} className='text-xs cursor-pointer'>Add comments</p>
-        <div className='flex justify-center'>
-          <img className='w-1/2' src="../public/image/travel.png" alt="travel" />
+        <div className='flex justify-center md:justify-end md:pr-20'>
+        <img className='w-1/3' src="../public/image/travel.png" alt="travel" />
         </div>
       </div>
     </section>
