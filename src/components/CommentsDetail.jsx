@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CommentsDetail = ({ showComments }) => {
+const CommentsDetail = ({ showComments }, {product}) => {
   const [isCommentsVisible, setIsCommentsVisible] = useState(false);
 
   const toggleComments = () => {
@@ -15,7 +15,7 @@ const CommentsDetail = ({ showComments }) => {
           type="button"
           onClick={toggleComments}
         >
-          Comments
+          Reviews
         </button>
         <div className={`accordion-collapse ${isCommentsVisible ? 'show' : 'collapse'}`} id="flush-collapseOne">
           <div className="accordion-body pl-10 border-t border-gray-300 mb-4">
