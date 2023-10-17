@@ -9,10 +9,10 @@ const About = () => {
         <div>
              <div className="hidden md:block">
                 <Carousel autoSlide={true} autoSlideInterval={5000}>
-                    <img className='w-full' src="../public/image/carouselHome1.png" alt="carousel_banner1" />
-                    <img className='w-full' src="../public/image/carouselHome2.png" alt="carousel_banner2" />
-                    <img className='w-full' src="../public/image/carouselHome3.png" alt="carousel_banner3" />
-                </Carousel>
+                <img className='w-full' src="../public/image/bn1.png" alt="carousel_banner1" />
+                <img className='w-full' src="../public/image/bn2.png" alt="carousel_banner2" />
+                <img className='w-full' src="../public/image/bn3.png" alt="carousel_banner3" />
+             </Carousel>
             </div>
 
             <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>

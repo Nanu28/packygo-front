@@ -4,7 +4,7 @@ import ConfirmationModal from '../ConfirmacionModal.jsx';
 import axios from "axios";
 import { DataContext } from "../Context/DataContext.jsx";
 
-const Products = () => {
+const Products = ({ selectedCategory }) => {
   const navigate = useNavigate();
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [selectedCardId, setSelectedCardId] = useState(null);
@@ -47,8 +47,11 @@ const Products = () => {
 
   const productsPerPage = 9;
   const pagesVisited = pageNumber * productsPerPage;
-  const displayedCards = data.slice(pagesVisited, pagesVisited + productsPerPage);
-  const pageCount = Math.ceil(data.length / productsPerPage);
+  const filteredData = selectedCategory === 'todos' 
+    ? data
+    : data.filter((product) => product.category.name === selectedCategory);
+  const displayedCards = filteredData.slice(pagesVisited, pagesVisited + productsPerPage);
+  const pageCount = Math.ceil(filteredData.length / productsPerPage);
 
   const changePage = (newPage) => {
     setPageNumber(newPage);
@@ -102,12 +105,6 @@ const Products = () => {
             </div>
           </div>
         ))}
-        <ConfirmationModal
-          isOpen={showConfirmation}
-          onClose={handleCancel}
-          onContinueShopping={handleContinueShopping}
-          onGoToCart={handleGoToCart}
-        />
       </section>
       <div className="pagination flex justify-center py-4 px-2 md:pb-4">
         <button

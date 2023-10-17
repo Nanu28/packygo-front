@@ -1,16 +1,23 @@
 import { Link } from 'react-router-dom';
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import { ProductContext } from '../components/Context/ProductContext.jsx';
-import ListProduct from '../components/ListProduct.jsx';
-import Filter from './../components/Filter.jsx';
+import { DataProvider, DataContext } from '../components/Context/DataContext.jsx';
 import Products from '../components/Products/Products.jsx';
+import carro from '../../public/image/maletas.png';
 
 function Store() {
   const [category, setCategory] = useState([]);
   const [text, setText] = useState('');
   const [check, setCheck] = useState([]);
-  const { active, setActive } = useContext(ProductContext);
+
+  const { data, cart, setCart } = useContext(DataContext);
+
+    // Estado inicial con una categoría ficticia que no existe
+  const [selectedCategory, setSelectedCategory] = useState('todos');
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category === selectedCategory ? 'todos' : category);
+  };
+
 
   const getCategory = async () => {
     try {
@@ -63,7 +70,7 @@ function Store() {
           <img className="w-6 md:mt-3 md:w-10" src="../../public/image/arrow_banner.png" alt="arrow_banner" />
         </div>
       </div>    
-       <Filter />
+   
 
        <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -73,30 +80,37 @@ function Store() {
           <p className='font-semibold'>/Store</p>
         </div>
         
-      <div className='flex w-full min-h-screen bg-green-700 flex-wrap '>
-{/*         <section className='w-40 mt-10 bg-sky-50 bg-opacity-95 border-2 border-amber-400 text-base'>
-          <h2 className='text-center py-2 pb-4 font-bold text-lg'>Categories</h2>
-          <form action="">
-            {category.map((category, index) => (
-              <label htmlFor={category.name} className='mb-4 flex items-center pl-6 gap-2' key={index}>
-                <input
-                  onClick={() => setFilters('check', category.name)}
-                  className='checked:bg-yellow-500'
-                  type="checkbox"
-                  name={category.name}
-                  id={category.name}
-                />
-                <span className="capitalize">{category.name}</span>
-              </label>
-            ))}
-          </form>
-        </section> */}
 
+
+      <div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2`}>
+        <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
+          {['Todos', ...data.reduce((categories, product) => {
+            if (!categories.includes(product.category.name)) {
+              categories.push(product.category.name);
+            }
+            return categories;
+          }, [])].map((category) => (
+            <button
+              key={category}
+              className={`bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-24 rounded-2xl mt-2 p-4 flex items-center justify-center  ${selectedCategory === category
+                  ? 'bg-sky-800 text-white'
+                  : 'bg-gray-300 text-gray-600'
+                } rounded-full`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category}
+            </button>
+          ))}
+
+          <Link to="/cart" className="p-1 w-14 md:w-20">
+            <img src={carro} alt="" />
+          </Link>
+        </div>
+      </div>
+      <div className='flex w-full min-h-screen bg-green-700 flex-wrap '>
         <div className='flex-1 bg-sky-100 overflow-x-hidden'>
-          <Products
-            searchText={text.toString()}
-            searchCheck={check.toString()}
-          />
+        <Products selectedCategory={selectedCategory} />
+
         </div>
 
 

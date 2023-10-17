@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { DataContext } from "../components/Context/DataContext.jsx";
+import Swal from 'sweetalert2';
 
 const questions = [
   {
@@ -32,6 +34,11 @@ function Trivia() {
   const [userAnswers, setUserAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [resultProduct, setResultProduct] = useState(null);
+  const { cart, setCart } = useContext(DataContext);
+  const user = localStorage.getItem("user");
+  const userObject = JSON.parse(user);
+  const role = userObject ? userObject.role : null;
+
 
   // Agrega los ID de productos según la mayoría de respuestas
   const productIDs = {
@@ -93,7 +100,27 @@ function Trivia() {
         console.error(error);
       });
   };
+  const buyProduct = (product) => {
+    if (role === null) {
+      // El usuario no ha iniciado sesión, muestra el SweetAlert
+      Swal.fire({
+        icon: 'error',
+        title: 'No tiene permiso para comprar',
+        text: '¿Desea iniciar sesión?',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, iniciar sesión',
+        cancelButtonText: 'Cancelar',
+      }).then((result) => {
+        if (result.isConfirmed) {
 
+          navigate(`/login`)
+        }
+      });
+    } else {
+      setCart([...cart, product]);
+    }
+  };
+  
   useEffect(() => {
     if (showResult) {
       calculateResult();
@@ -106,54 +133,60 @@ function Trivia() {
 
   if (showResult) {
     display = (
-<div className="flex flex-col justify-center">
-  <p className="text-lg pb-2 text-center font-semibold md:text-2xl ">
-    ¡Gracias por completar la trivia! Aquí está tu resultado:
-  </p>
-  {resultProduct && (
-    <div className="flex flex-wrap justify-center px-2 py-2 shadow-gray-950 shadow-md bg-white md:my-10 md:px-0 md:mx-52">
-      <div className="w-1/2 lg:w-1/4 py-2">
-        <img src={resultProduct.photo} alt="product" className="mx-auto" />
+      <div className="flex flex-col justify-center">
+        <p className="text-lg pb-2 text-center font-semibold md:text-2xl ">
+          ¡Gracias por completar la trivia! Aquí está tu resultado:
+        </p>
+        {resultProduct && (
+          <div className="flex flex-wrap justify-center px-2 py-2 shadow-gray-950 shadow-md bg-white md:my-10 md:px-0 md:mx-52">
+            <div className="w-1/2 lg:w-1/4 py-2">
+              <img src={resultProduct.photo} alt="product" className="mx-auto" />
+            </div>
+            <div className="w-full md:w-1/2 lg:w-2/3 py-5 md:py-10 md:pl-10 md:px-5">
+              <p className="text-xl font-semibold my-2 md:pb-5">Producto Recomendado:</p>
+              <div className="my-2">
+                <strong>Nombre:</strong> {resultProduct.name}
+              </div>
+              <div className="my-2">
+                <strong>Descripción:</strong> {resultProduct.description}
+              </div>
+              <button
+                className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
+                onClick={() => buyProduct(resultProduct)}
+              >
+                Buy
+              </button>
+
+            </div>
+          </div>
+        )}
       </div>
-      <div className="w-full md:w-1/2 lg:w-2/3 py-5 md:py-10 md:pl-10 md:px-5">
-        <p className="text-xl font-semibold my-2 md:pb-5">Producto Recomendado:</p>
-        <div className="my-2">
-          <strong>Nombre:</strong> {resultProduct.name}
-        </div>
-        <div className="my-2">
-          <strong>Descripción:</strong> {resultProduct.description}
-        </div>
-        {/* Agrega más detalles del producto según tu base de datos */}
-      </div>
-    </div>
-  )}
-</div>
 
     );
   } else {
     display = (
       <div className="flex flex-col items-center justify-center pb-5 md:flex-row">
-      <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-sky-50 rounded-lg md:w-2/3">
-        <p className="text-xl text-center font-semibold md:text-2xl">Question {currentQuestion + 1}:</p>
-        {question && (
-          <div>
-            <p className="text-base text-center my-2 md:text-xl">{question.question}</p>
-            <div className="flex flex-col items-center justify-center gap-2 md:grid md:grid-cols-2">
-              {question.options.map((option) => (
-                <button
-                  key={option}
-                  onClick={() => handleNextQuestion(option)}
-                  className="w-48 text-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-2 md:w-auto"
-                >
-                  {option}
-                </button>
-              ))}
+        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-sky-50 rounded-lg md:w-2/3">
+          <p className="text-xl text-center font-semibold md:text-2xl">Question {currentQuestion + 1}:</p>
+          {question && (
+            <div>
+              <p className="text-base text-center my-2 md:text-xl">{question.question}</p>
+              <div className="flex flex-col items-center justify-center gap-2 md:grid md:grid-cols-2">
+                {question.options.map((option) => (
+                  <button
+                    key={option}
+                    onClick={() => handleNextQuestion(option)}
+                    className="w-48 text-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-2 md:w-auto"
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
-    
+
     );
   }
 

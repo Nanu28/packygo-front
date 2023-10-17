@@ -29,7 +29,7 @@ const CartElements = () => {
                     <h4 className='price font-bold text-lg'>{product.price * product.quanty}$</h4>
                     </div>
                     
-                    <h3 class='cart-delete-button' onClick={() => deleteProduct(product._id)}>
+                    <h3 class='cursor-pointer  cart-delete-button' onClick={() => deleteProduct(product._id)}>
                         ❌
                     </h3>
                 </div>

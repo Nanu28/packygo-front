@@ -29,9 +29,9 @@ const Blog = () => {
             </div>
 
 
-            <div className='w-full h-full flex flex-grow bg-orange-200items-center justify-center'>
+            <div className='w-full h-full flex flex-grow bg-orange-400 items-center justify-center'>
 
-                <div className='flex flex-row bg-orange-400 w-full items-center justify-around text-2xl' >
+                <div className='bg-orange-400 w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-6'>
 
                     <div className="relative inline-block">
                         <img className='opacity-80' src="../public/image/travelBlog.png" alt="pet's_accesories_category" />

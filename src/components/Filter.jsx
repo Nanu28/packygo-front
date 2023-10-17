@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 	const { active, handleCheckbox } = useContext(ProductContext);
 
 	return (
-		<div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2 ${active ? 'active' : 'text-xl font-medium'}`}>
+		<></>
+
+		/*<div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2 ${active ? 'active' : 'text-xl font-medium'}`}>
 			<div className='flex flex-col items-center justify-center gap-2 md:flex-row'>
 
 				<div className='p-1 text-base font-medium md:text-xl'>
@@ -63,7 +65,7 @@ import { Link } from 'react-router-dom';
 				</Link>
 				
 			</div>
-		</div>
+		</div> */
 	);
 };
 export default Filter;
