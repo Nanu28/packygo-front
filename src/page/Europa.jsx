@@ -21,7 +21,7 @@ const Europa = () => {
                 </svg>
 
                 <p onClick={() => navigate('/blog')} className='font-semibold cursor-pointer'>/Blog</p>
-                <p className=''>/Traveling with pets</p>
+                <p className=''>/Europe</p>
             </div>
 
 

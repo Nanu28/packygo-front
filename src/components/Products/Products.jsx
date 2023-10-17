@@ -4,7 +4,7 @@ import ConfirmationModal from '../ConfirmacionModal.jsx';
 import axios from "axios";
 import { DataContext } from "../Context/DataContext.jsx";
 
-const Products = () => {
+const Products = ({ selectedCategory }) => {
   const navigate = useNavigate();
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [selectedCardId, setSelectedCardId] = useState(null);
@@ -47,8 +47,11 @@ const Products = () => {
 
   const productsPerPage = 9;
   const pagesVisited = pageNumber * productsPerPage;
-  const displayedCards = data.slice(pagesVisited, pagesVisited + productsPerPage);
-  const pageCount = Math.ceil(data.length / productsPerPage);
+  const filteredData = selectedCategory === 'todos' 
+    ? data
+    : data.filter((product) => product.category.name === selectedCategory);
+  const displayedCards = filteredData.slice(pagesVisited, pagesVisited + productsPerPage);
+  const pageCount = Math.ceil(filteredData.length / productsPerPage);
 
   const changePage = (newPage) => {
     setPageNumber(newPage);
@@ -72,21 +75,6 @@ const Products = () => {
   return (
     <>
       <section className="flex flex-wrap justify-center gap-4 lg:p-10">
-      <section className="flex flex-col lg:flex-row gap-4 lg:p-10">
-            <div className="h-[290px] w-[290px] bg-slate-300 flex flex-col">
-                <div className="flex h-full flex-col items-center">
-                    <div className="h-[60%] w-[90%] bg-black">asd</div>
-                    <div className="gap-5 flex flex-col w-full">
-                        <h2 className="text-center">Title</h2>
-                        <div className="flex justify-around">
-                            <span>Price: $4.99</span>
-                            <button className="bg-blue-400 w-16 h-8 rounded-lg">Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
         {displayedCards.map((card, _id) => (
           <div key={_id} className="w-72 h-fit items-center py-2 shadow-gray-950 shadow-md bg-sky-50 flex flex-col rounded-lg">
             <div>
@@ -117,12 +105,6 @@ const Products = () => {
             </div>
           </div>
         ))}
-        <ConfirmationModal
-          isOpen={showConfirmation}
-          onClose={handleCancel}
-          onContinueShopping={handleContinueShopping}
-          onGoToCart={handleGoToCart}
-        />
       </section>
       <div className="pagination flex justify-center py-4 px-2 md:pb-4">
         <button

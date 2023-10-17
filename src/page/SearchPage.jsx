@@ -34,15 +34,7 @@ const SearchPage = () => {
   });
 
   return (
-    <div className="h-full">
-      <div className="relative w-full h-40 bg-cover bg-center md:h-48" style={{ backgroundImage: `url('../../public/image/store_banner.png')` }}>
-        <div className="flex flex-col w-full pt-8 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
-          <p className="text-lg text-slate-800 md:text-3xl">Welcome to the paradise</p>
-          <p className="text-lg text-slate-800 md:text-3xl">of travelers</p>
-          <p className="text-base text-yellow-500 font-bold md:text-lg">All you need is here</p>
-          <img className="w-6 md:mt-3 md:w-10" src="../../public/image/arrow_banner.png" alt="arrow_banner" />
-        </div>
-      </div>    
+    <div className='h-full'>
 
       <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -50,7 +42,7 @@ const SearchPage = () => {
         </svg>
         <Link to="/">Home</Link>
         <Link className='font-semibold' to="/store">/Store</Link>
-      </div>   
+      </div>
 
       <div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2`}>
         <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
@@ -62,11 +54,10 @@ const SearchPage = () => {
           }, [])].map((category) => (
             <button
               key={category}
-              className={`bg-sky-800 hover:bg-yellow-600 text-gray-600 text-base font-bold h-8 w-24 rounded-2xl mt-2 p-3 flex items-center justify-center  ${
-                selectedCategory === category
-                  ? 'bg-sky-800 text-white'
-                  : 'bg-gray-300 text-gray-600'
-              } rounded-full`}
+              className={`bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-24 rounded-2xl mt-2 p-4 flex items-center justify-center  ${selectedCategory === category
+                ? 'bg-sky-800 text-white'
+                : 'bg-gray-300 text-gray-600'
+                } rounded-full`}
               onClick={() => handleCategoryClick(category)}
             >
               {category}
@@ -95,10 +86,11 @@ const SearchPage = () => {
             <div className="flex justify-center items-center font-semibold gap-2">
               <button
                 className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
-                onClick={() => buyProduct(product)}
+                onClick={() => buyProduct(card)}
               >
                 Buy
               </button>
+
               <Link
                 to={`/details/${product._id}`}
                 className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
@@ -112,6 +104,13 @@ const SearchPage = () => {
           </div>
         ))}
       </div>
+
+
+
+
+
+
+
     </div>
   );
 };

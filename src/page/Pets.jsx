@@ -20,7 +20,7 @@ const Pets = () => {
                 </svg>
 
                 <p onClick={() => navigate('/blog')} className='font-semibold cursor-pointer' >/Blog</p>
-                <p className=''>/Share your experience traveling with pets</p>
+                <p className=''>/Traveling with pets</p>
             </div>
 
             <div className='bg-orange-400 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6'>

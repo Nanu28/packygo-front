@@ -17,6 +17,7 @@ import Europa from "../page/Europa.jsx"
 import America from "../page/America.jsx"
 import Pets from "../page/Pets.jsx"
 import About from "../page/About.jsx"
+import Trivia from "../components/TriviaBlog.jsx"
 
 
 
@@ -92,6 +93,11 @@ const Router = createBrowserRouter([
                 path: '/pets',
                 element: <Pets />
             },
+            {
+                path: '/trivia',
+                element: <Trivia />
+            },
+
 
 
         ]
