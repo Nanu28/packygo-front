@@ -9,9 +9,9 @@ const America = () => {
         <div className='bg-sky-50'>
             <div className="hidden md:block">
                 <Carousel autoSlide={true} autoSlideInterval={5000}>
-                    <img className='w-full' src="../public/image/carouselHome1.png" alt="carousel_banner1" />
-                    <img className='w-full' src="../public/image/carouselHome2.png" alt="carousel_banner2" />
-                    <img className='w-full' src="../public/image/carouselHome3.png" alt="carousel_banner3" />
+                <img className='w-full' src="../public/image/bn1.png" alt="carousel_banner1" />
+                <img className='w-full' src="../public/image/bn2.png" alt="carousel_banner2" />
+                <img className='w-full' src="../public/image/bn3.png" alt="carousel_banner3" />         
                 </Carousel>
             </div>
 
@@ -25,14 +25,17 @@ const America = () => {
             </div>
            
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6'>
+            <div className='bg-orange-400 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6'>
 
 
-                <div class="bg-red-200 shadow-md h-4/5 ">
-                    <img className='h-56 object-cover w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQof626K2P5_Gq6i7HG3ic0NgFnlfrbdVgOFA&usqp=CAU" class="w-full h-40 object-cover " />
-                    <div class="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
+                <div class="  h-full p-2 ">
+                    <div className='w-full h-56 '>
+                         <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQof626K2P5_Gq6i7HG3ic0NgFnlfrbdVgOFA&usqp=CAU"/>
+                    </div>
+                   
+                    <div class="bg-gray-100 min-h-5/6 p-2 flex flex-col justify-between">
                         <h5 class="text-xl font-bold">Malta</h5>
-                        <p className="text-gray-600 min-h-4/5">
+                        <p  className="text-gray-600 h-5/6 p-3">
                             Basic information with which to take a trip to Malta
                             I will be quick and concise, clear sentences with the most important information for a trip to Malta.
                             The Republic of Malta is a European Union country, so if you have an EU SIM card, you can browse and call as if you were in your own country.
@@ -54,12 +57,14 @@ const America = () => {
                 </div>
 
 
-                <div class="bg-red-200 shadow-md h-4/5 ">
-                  
-                    <img className='h-56 object-cover w-full' src="https://eaqxr36k8gu.exactdn.com/wp-content/uploads/2013/07/que-ver-y-hacer-en-paris-torre-eiffel.jpg?strip=all&lossy=1&resize=1000%2C621&ssl=1" />
-                    <div class="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
-                        <h5 class="text-xl font-bold">Francia</h5>
-                        <p className="text-gray-600 min-h-4/5">Fue construida por Gustave Eiffel para conmemorar el centenario de la Revolución Francesa y su inauguración coincidió con la Exposición Mundial de París de 1889. Aunque en sus inicios no fue del agrado de todos los parisino, e incluso llegó a tener carácter provisional (en teoría se desarmaría en el año 1900), poco a poco la gente se acostumbró a la apodada “La Dame de Fer” (la Dama de Hierro) hasta convertirse en el mayor símbolo de París.
+                <div className=" h-full p-2">
+                <div className='w-full h-56 '>
+                    <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://eaqxr36k8gu.exactdn.com/wp-content/uploads/2013/07/que-ver-y-hacer-en-paris-torre-eiffel.jpg?strip=all&lossy=1&resize=1000%2C621&ssl=1" />
+                </div>
+                    <div class="bg-gray-100 min-h-5/6 p-2 flex flex-col justify-between">
+                        <h5 className="text-xl font-bold">Francia</h5>
+                        <p  className="text-gray-600 h-5/6 p-3">
+                            Fue construida por Gustave Eiffel para conmemorar el centenario de la Revolución Francesa y su inauguración coincidió con la Exposición Mundial de París de 1889. Aunque en sus inicios no fue del agrado de todos los parisino, e incluso llegó a tener carácter provisional (en teoría se desarmaría en el año 1900), poco a poco la gente se acostumbró a la apodada “La Dame de Fer” (la Dama de Hierro) hasta convertirse en el mayor símbolo de París.
 
                             Tiene una altura de 324 metros y se dispone en tres niveles, accesibles con diferentes tickets (dependiendo del nivel que quieras visitar y si usas o no el ascensor el precio cambia). Pero ya que estás, te recomendamos subir hasta arriba del todo, a 276 metros de altura, para disfrutar de unas maravillosas vistas de París y de algunas de sus principales atracciones turísticas (de las que te hablamos en este post).
 
@@ -74,11 +79,13 @@ const America = () => {
                 </div>
 
 
-                <div className="bg-red-200 shado h-4/5 w-md">
-                    <img classNameName='h-56 object-cover w-full' src="https://www.guiaenturismo.com/wp-content/uploads/2018/01/Las-Tendencias-Turisticas-Populares-en-Europa.jpg" className="w-full h-40 object-cover " />
-                    <div className="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
+                <div className=" h-full p-2 ">
+                <div className='w-full h-56 '>
+                    <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://www.guiaenturismo.com/wp-content/uploads/2018/01/Las-Tendencias-Turisticas-Populares-en-Europa.jpg"  />
+                </div>
+                    <div className="bg-gray-100 min-h-5/6 p-2 flex flex-col justify-between">
                         <h5 className="text-xl font-bold">Lisbon</h5>
-                        <p className="text-gray-600 min-h-4/5">
+                        <p className="text-gray-600 h-5/6 p-3">
                             Lisbon
                             The feeling of nostalgia runs through the streets of the city that always seems very far away. Lisbon is that city that seems to belong to another era. It is marked by very narrow roads, the viewpoints of its sky and its ocean. With a light that allows you to take a momentary walk into each person's past just by resting your eyes on its cobblestone floors and its old-style houses.
                             Edinburgh
@@ -94,6 +101,57 @@ const America = () => {
                 </div>
 
             </div>
+
+            <div className='w-full bg-orange-300 flex justify-center items-center'>
+            <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-400 rounded-xl m-3">
+                            <div className="mx-auto max-w-lg">
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Photo :</span>
+                                    <input
+                                        //ref={Photo}
+                                        type="file"
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none" 
+                                    />
+
+                                </div>
+
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Title :</span>
+                                    <input                                      
+                                        //ref={Title}
+                                        type="Title"
+                                        autoComplete="current-Title" // Agregar este atributo
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Description :</span>
+                                    <input                                      
+                                        //ref={Description}
+                                        type="Description"
+                                        autoComplete="current-Description" // Agregar este atributo
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Data :</span>
+                                    <input                                      
+                                        //ref={Data}
+                                        placeholder='Name - 22/12/2023'
+                                        type="Data"
+                                        autoComplete="current-Data" // Agregar este atributo
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                <div className='flex justify-center '>
+                                    <button
+                                        className='p-1 m-3 font-bold text-white ml-5 w-28 bg-sky-800 hover-bg-yellow-600 rounded-full md:p-3'
+                                        type="submit">Send
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+            </div>
         </div>
     );
 };
@@ -101,12 +159,11 @@ const America = () => {
 export default America;
 
 
-/*           <div class="bg-red-200 shadow-md">
+/*           <div class=" ">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPZEAbcYchcHz-lu_RsYLHYNZB9KeGfapDrg&usqp=CAU" class="w-full h-40 object-cover " />
-                    <div class="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
+                    <div class="bg-gray-100 min-h-5/6  flex flex-col justify-between">
                         <h5 class="text-xl font-bold">Malta</h5>
-            
-                            <ul>
+            n                          <ul>
                                 <li>
                                     Basic information with which to take a trip to Malta
                                 </li>

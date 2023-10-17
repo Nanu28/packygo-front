@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { ProductContext } from '../components/Context/ProductContext.jsx';
 import ListProduct from '../components/ListProduct.jsx';
-import Filter from './../components/Filter.jsx';
+
 import Products from '../components/Products/Products.jsx';
 
 function Store() {
@@ -63,7 +63,7 @@ function Store() {
           <img className="w-6 md:mt-3 md:w-10" src="../../public/image/arrow_banner.png" alt="arrow_banner" />
         </div>
       </div>    
-       <Filter />
+   
 
        <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Admin = () => {
   const [products, setProducts] = useState([]);
@@ -31,9 +32,9 @@ const Admin = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
+  const handleCreate = async (event) => {
+    event.preventDefault(); // Evitar la recarga de la página
+  
     const productData = {
       category,
       name,
@@ -43,14 +44,30 @@ const Admin = () => {
       stock,
       photo,
     };
-
+  
     try {
       await axios.post('http://localhost:8000/products', productData);
       console.log('Producto creado exitosamente.');
+  
+      // Mostrar una alerta de éxito
+      Swal.fire('Éxito', 'El producto se creó con éxito', 'success');
+  
+      // Limpia los campos del formulario o realiza alguna otra acción si es necesario
+      setCategory("");
+      setName("");
+      setDescription("");
+      setQuanty(0);
+      setPrice(0);
+      setStock(0);
+      setPhoto("");
     } catch (error) {
       console.log('Error:', error);
+  
+      // Mostrar una alerta de error
+      Swal.fire('Error', 'No se pudo crear el producto', 'error');
     }
   };
+  
 
   const handleEdit = async (e) => {
     e.preventDefault();
@@ -67,22 +84,56 @@ const Admin = () => {
 
     try {
       await axios.put(`http://localhost:8000/products/${editingProductId}`, productData);
-
       console.log('Producto actualizado exitosamente.');
+
+      // Mostrar una alerta de éxito
+      Swal.fire('Éxito', 'El producto se actualizó con éxito', 'success');
+
+      // Limpia los campos del formulario o realiza alguna otra acción si es necesario
       setEditingProductId(null);
+      setCategory("");
+      setName("");
+      setDescription("");
+      setQuanty(0);
+      setPrice(0);
+      setStock(0);
+      setPhoto("");
     } catch (error) {
       console.log('Error:', error);
+
+      // Mostrar una alerta de error
+      Swal.fire('Error', 'No se pudo actualizar el producto', 'error');
     }
   };
 
   const handleDelete = async (productId) => {
-    try {
-      await axios.delete(`http://localhost:8000/products/${productId}`);
-      console.log('Producto eliminado exitosamente.');
-      getProducts(); // Recargar la lista de productos después de eliminar
-    } catch (error) {
-      console.log('Error:', error);
-    }
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción no se puede deshacer',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:8000/products/${productId}`);
+          console.log('Producto eliminado exitosamente.');
+
+          // Mostrar una alerta de éxito
+          Swal.fire('Éxito', 'El producto se eliminó con éxito', 'success');
+
+          getProducts();
+        } catch (error) {
+          console.log('Error:', error);
+
+          // Mostrar una alerta de error
+          Swal.fire('Error', 'No se pudo eliminar el producto', 'error');
+        }
+      }
+    });
   };
 
   const handleImageUpload = (e) => {
@@ -102,7 +153,7 @@ const Admin = () => {
     <div className="container max-w-full mx-auto md:py-24 px-6 flex flex-col">
       {/* Formulario de Creación */}
       <div className="bg-blue-200 w-full">
-        <form className="mt-8" onSubmit={handleSubmit}>
+        <form className="mt-8" onSubmit={handleCreate}>
           <div className="mx-auto max-w-lg">
             <p className="text-xl font-bold">Añadir un producto</p>
             <div className="py-1">
