@@ -55,12 +55,12 @@ const Details = () => {
         </svg>
         <Link to="/">Home</Link>
         <Link to="/store">/Store</Link>
-        <Link to="#">/Details</Link>
-        <span className='font-semibold'>/Yellow suitcase</span>
+        <p>/Details</p>
+        <p className='font-semibold'>/Yellow suitcase</p>
       </div>
 
-      <div className='flex flex-col md:flex-row bg-sky-100'>
-        <section className='px-6 py-2 md:w-1/3 md:ml-24 md:mr-10'>
+      <div className='flex flex-col md:flex-row md:items-center bg-sky-100'>
+        <section className='px-6 py-2 md:w-1/4 md:ml-24 md:mr-10'>
           <CarrouselDetails product={product} />
           <PriceDetails product={product} />
         </section>

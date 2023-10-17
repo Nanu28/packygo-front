@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 const questions = [
   {
@@ -26,7 +27,7 @@ const questions = [
   },
 ];
 
-function Blog() {
+function Trivia() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
@@ -105,53 +106,72 @@ function Blog() {
 
   if (showResult) {
     display = (
-      <div>
-        <p className="text-2xl font-semibold my-4">¡Gracias por completar la trivia! Aquí está tu resultado:</p>
-        {resultProduct && (
-          <div>
-            <p className="text-xl my-2">Producto Recomendado:</p>
-            <div className="my-2">
-              <strong>Nombre:</strong> {resultProduct.name}
-            </div>
-            <div className="my-2">
-              <strong>Descripción:</strong> {resultProduct.description}
-            </div>
-            <div className="my-2">
-            <img src= {resultProduct.photo} alt="product" />
-            </div>
-            {/* Agrega más detalles del producto según tu base de datos */}
-          </div>
-        )}
+<div className="flex flex-col justify-center">
+  <p className="text-lg pb-2 text-center font-semibold md:text-2xl ">
+    ¡Gracias por completar la trivia! Aquí está tu resultado:
+  </p>
+  {resultProduct && (
+    <div className="flex flex-wrap justify-center px-2 py-2 shadow-gray-950 shadow-md bg-white md:my-10 md:px-0 md:mx-52">
+      <div className="w-1/2 lg:w-1/4 py-2">
+        <img src={resultProduct.photo} alt="product" className="mx-auto" />
       </div>
+      <div className="w-full md:w-1/2 lg:w-2/3 py-5 md:py-10 md:pl-10 md:px-5">
+        <p className="text-xl font-semibold my-2 md:pb-5">Producto Recomendado:</p>
+        <div className="my-2">
+          <strong>Nombre:</strong> {resultProduct.name}
+        </div>
+        <div className="my-2">
+          <strong>Descripción:</strong> {resultProduct.description}
+        </div>
+        {/* Agrega más detalles del producto según tu base de datos */}
+      </div>
+    </div>
+  )}
+</div>
+
     );
   } else {
     display = (
-      <div>
-        <p className="text-2xl font-semibold my-4">Pregunta {currentQuestion + 1}:</p>
+      <div className="flex flex-col items-center justify-center pb-5 md:flex-row">
+      <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-sky-50 rounded-lg md:w-2/3">
+        <p className="text-xl text-center font-semibold md:text-2xl">Question {currentQuestion + 1}:</p>
         {question && (
           <div>
-            <p className="text-xl my-2">{question.question}</p>
-            {question.options.map((option) => (
-              <button
-                key={option}
-                onClick={() => handleNextQuestion(option)}
-                className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-2"
-              >
-                {option}
-              </button>
-           ))}
+            <p className="text-base text-center my-2 md:text-xl">{question.question}</p>
+            <div className="flex flex-col items-center justify-center gap-2 md:grid md:grid-cols-2">
+              {question.options.map((option) => (
+                <button
+                  key={option}
+                  onClick={() => handleNextQuestion(option)}
+                  className="w-48 text-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-2 md:w-auto"
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
+    </div>
+    
     );
   }
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold my-4">Trivia de Viaje</h1>
+    <div className="bg-sky-100">
+      <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+        </svg>
+        <Link to="/">Home</Link>
+        <Link to="/store">/Store</Link>
+        <p className='font-semibold'>/Travel trivia</p>
+      </div>
+
+      <h1 className="text-3xl font-bold pb-2 text-center">Travel trivia</h1>
       {display}
     </div>
   );
 }
 
-export default Blog;
+export default Trivia;
