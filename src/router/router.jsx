@@ -12,6 +12,8 @@ import CartContent from "../components/CartContent/CartContent.jsx"
 import Admin from "../page/Admin.jsx"
 import SearchPage from "../page/SearchPage.jsx"
 import Pay from "../page/Pay.jsx"
+import Blog from "../page/Blog.jsx"
+
 
 
 
@@ -62,7 +64,11 @@ const  Router = createBrowserRouter([
             {
                 path: '/pay/:total' ,
                 element: <Pay/>
-           }
+           },
+           {
+            path: '/blog' ,
+            element: <Blog/>
+       }
             
            
         ]
