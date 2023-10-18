@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Carousel from '../components/Carrousel.jsx'
-const Pets = () => {
+const TravelingPets = () => {
     const navigate = useNavigate();
     return (
 
@@ -31,13 +31,13 @@ const Pets = () => {
                         <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxQnYyPezAZVbF1RQius3LfoR1uXvJt1SQKIYWrVPXXX3QJj32R-r65TvdipdMpTfbSAo&usqp=CAU" />
                     </div>
                     <div class="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
-                        <h5 class="text-xl font-bold">Malta</h5>
-                        <p className="text-gray-600 h-96">Airlines require visually impaired passengers to notify at least two days before the flight. It is important to contact the airline and airport to request assistance. Airport staff assist with check-in, security checks and boarding gate. The crew offers accessible safety information. Guide dogs are allowed at no additional cost if advance notice is given.
+                        <h5 class="text-xl font-bold">Assistance dog for flying</h5>
+                        <p className="text-gray-600 h-96 py-4">Airlines require visually impaired passengers to notify at least two days before the flight. It is important to contact the airline and airport to request assistance. Airport staff assist with check-in, security checks and boarding gate. The crew offers accessible safety information. Guide dogs are allowed at no additional cost if advance notice is given.
                         </p>
 
                     </div>
                     <div class="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                        <small class="text-gray-500">Maria - 25/05/2019</small>
+                        <small class="text-gray-500">Adam - 22/07/2020</small>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@ const Pets = () => {
                     </div>
                     <div class="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
                         <h5 class="text-xl font-bold">General measures</h5>
-                        <ul className="list-disc pl-4 text-md mt-2 text-gray-600 h-96">
+                        <ul className="list-disc pl-4 text-md mt-2 text-gray-600 h-96 py-4">
                             <li className="mb-1">
                                 The last meal should be at least two hours before the trip to avoid dizziness and vomiting.
                             </li>
@@ -71,7 +71,7 @@ const Pets = () => {
                         </ul>
                     </div>
                     <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                        <small className="text-gray-500">Maria - 25/05/2019</small>
+                        <small className="text-gray-500">Joaquin - 22/02/2021</small>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@ const Pets = () => {
                     <div className="bg-gray-100 min-h-[35%] p-4 flex flex-col justify-between">
                         <h5 className="text-xl font-bold">If you travel by air</h5>
 
-                        <ul className="list-disc pl-4 text-md mt-2 text-gray-600 h-96">
+                        <ul className="list-disc pl-4 text-md mt-2 text-gray-600 h-96 py-4">
                             <li className="mb-1">
                                 Consult the regulations of each airline regarding the transport of pets.
                             </li>
@@ -101,13 +101,13 @@ const Pets = () => {
                         </ul>
                     </div>
                     <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                        <small className="text-gray-500">Maria - 25/05/2019</small>
+                        <small className="text-gray-500">Gladys - 22/06/2022</small>
                     </div>
                 </div>
 
             </div>
-            <div className='w-full bg-orange-300 flex justify-center items-center'>
-                <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-400 rounded-xl m-3">
+            <div className='w-full bg-orange-400 flex justify-center items-center'>
+                <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-300 rounded-xl m-3">
                     <div className="mx-auto max-w-lg">
                         <div className="py-1">
                             <span className="px-1 text-sm text-gray-600">Photo :</span>
@@ -161,4 +161,4 @@ const Pets = () => {
 }
 
 
-export default Pets
+export default TravelingPets

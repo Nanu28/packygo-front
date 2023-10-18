@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import Carousel from '../components/Carrousel.jsx'
 import Valoraciones from '../components/Valoraciones.jsx'
 import baner1 from '../../public/image/baner1.png'
@@ -13,6 +15,7 @@ import prueba2 from '../../public/image/prueba2.png'
 import BannerIndex from '../components/BannerIndex.jsx'
 import CategoriesIndex from '../components/CategoriesIndex.jsx'
 import VisionMision from '../components/visionMision.jsx'
+
 
 function Index() {
   return (

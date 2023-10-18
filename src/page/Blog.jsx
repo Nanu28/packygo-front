@@ -35,17 +35,17 @@ const Blog = () => {
 
                     <div className="relative inline-block">
                         <img className='opacity-80' src="../public/image/travelBlog.png" alt="pet's_accesories_category" />
-                        <button onClick={() => navigate('/america')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Latin America and Europe</button>
+                        <button onClick={() => navigate('/americaAndEurope')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Latin America and Europe</button>
                     </div>
 
                     <div className="relative inline-block">
                         <img className='opacity-80' src="../public/image/tipsBlog.png" alt="pet's_accesories_category" />
-                        <button onClick={() => navigate('/europa')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Tips about luggage</button>
+                        <button onClick={() => navigate('/tipsAboutLuggage')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Tips about luggage</button>
                     </div>
 
                     <div className="relative inline-block">
                         <img className='opacity-80' src="../public/image/travelPetsBlog.png" alt="pet's_accesories_category" />
-                        <button onClick={() => navigate('/pets')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Traveling with pets</button>
+                        <button onClick={() => navigate('/travelingPets')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Traveling with pets</button>
                     </div>
 
                     <div className="relative inline-block">

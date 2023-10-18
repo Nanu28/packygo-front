@@ -1,29 +1,97 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-
+import { DataContext } from "../components/Context/DataContext.jsx";
+import React, { useState, useContext } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { PayPalButton } from 'react-paypal-button-v2';
+import jsPDF from 'jspdf';  
 
 const Pay = () => {
+  const { cart } = useContext(DataContext);
+  //console.log(cart);
 
-  
-    const { total} = useParams();
+  const { total } = useParams(); // Obtén el total de la URL
+
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
+  const paypalOptions = {
+    clientId: 'ARg6xp3qWZd3iZm3562vjDU6TVavQw_1xbLwvVT3E169PvdG9U8yL0NRHc9ahMj_UjocCubpXCzAWQDv',
+  };
+
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    doc.text('Orden de Compra', 10, 10);
+    doc.text('Detalles del producto:', 10, 20);
+    // Puedes agregar más detalles al PDF según tus necesidades
+
+    doc.save('orden_de_compra.pdf');
+  };
+
+  const onSuccess = (details, data) => {
+    // Lógica para manejar el pago exitoso
+    console.log('Pago exitoso:', details);
+
+    if (details.status === 'COMPLETED') {
+      // La transacción se completó con éxito
+      console.log('Transacción completada con éxito');
+      setSuccessMessageVisible(true);
+      generatePDF(); // Llama a la función para generar el PDF
+    } else {
+      // La transacción no se completó con éxito
+      console.log('La transacción no se completó con éxito');
+    }
+  };
+
   return (
-    <>
-                <div class="relative w-full h-36 bg-cover bg-center md:h-48"
-                style={{ backgroundImage: `url('../../public/image/register_banner.png')` }}>
-                 <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
-                    <p class="text-xl text-slate-800 md:text-3xl">Your best travel itinerary</p>
-                    <p class="text-base text-yellow-500 font-bold md:text-lg">begins here</p>
-                    <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+    <div>
+
+      <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+        </svg>
+        <Link to="/">Home</Link>
+        <Link to="/store">/Store</Link>
+        <Link to="/cart">/Cart</Link>
+        <p className='font-semibold'>/Payment</p>
+      </div>
+
+      <div className="mx-auto p-4 bg-sky-100">
+        <div className="bg-sky-100 p-4 rounded-lg w-full flex items-center justify-center ">
+          <div>
+            <p className="text-lg font-semibold">Product details:</p>
+            <div className="mx-auto bg-sky-100 w-full flex flex-wrap">
+              {cart.map((product, index) => (
+                <div key={index} className='flex flex-col justify-around items-center flex-wrap m-8 w-72 bg-white rounded-3xl shadow-gray-950 shadow-md gap-2 py-4 md:flex-row' >
+                  <img src={product.photo} alt={`product-image-${index}`} className="h-32 w-32 object-contain" />
+                  <div className="flex flex-col gap-3">
+                    <h3 className='name font-semibold text-center'>{product.name}</h3>
+                    {/* Agrega otros detalles del producto aquí, si es necesario */}
+                  </div>
                 </div>
+              ))}
             </div>
 
-            <div className='w-full h-96 bg-orange-500'>
-              <p className='bg-red-500 h-12 items-center justify-center flex'> {total} </p>
-            </div>
+            <p className="text-xl text-center lg:text-2xl">Total: ${total}</p>
+          </div>
+        </div>
+
+        <div className="bg-sky-100 w-full lg:px-60">
+          <PayPalButton
+            amount={total}
+            options={paypalOptions}
+            onSuccess={onSuccess}
+          />
+        </div>
 
 
-    </>
-  )
-}
 
-export default Pay
+
+        {successMessageVisible && (
+          <div className="mt-4 bg-green-200 p-4 rounded-lg shadow-md">
+            <p className="text-green-600 text-lg">The purchase has been successfully completed!</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Pay;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Carousel from '../components/Carrousel.jsx'
-const Europa = () => {
+const TipsAboutLuggage = () => {
 
     const navigate = useNavigate();
     return (
@@ -30,13 +30,12 @@ const Europa = () => {
 
                     <div className=" h-full p-2 w-96 gap-10 ">
                         <div className='w-full h-56 '>
-                            <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ02ReqzrsWTCMZbkppGNdmwnXN5yURQdWBFg&usqp=CAU" />
+                            <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://www.mobiliariocomercialmaniquies.com/blog/wp-content/uploads/2022/06/pexels-ketut-subiyanto-4245905.jpg" />
                         </div>
 
                         <div class="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
-                            <h5 class="text-xl font-bold">Malta</h5>
-                            <p className="text-gray-600 h-96">
-                                1. Choose the right suitcase
+                            <h5 class="text-xl font-bold">Choose the right suitcase</h5>
+                            <p className="text-gray-600 h-96  my-4">
                                 It is essential that we choose the suitcase that is most convenient and comfortable for our trip,
                                 since the amount of storage space will depend on it.
                                 For the selection we must take into account the specifications of the airline with which we will travel
@@ -50,7 +49,7 @@ const Europa = () => {
 
                         </div>
                         <div class="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                            <small class="text-gray-500">Maria - 25/05/2019</small>
+                            <small class="text-gray-500">Amanda - 21/09/2023</small>
                         </div>
                     </div>
 
@@ -59,9 +58,8 @@ const Europa = () => {
                             <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://www.wradio.com.co/resizer/0tNr79x1rNv3_CxHxjjFQdfer7Q=/650x488/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/C2W34A24OJHANF3BT5V3IM3RWU.jpg" />
                         </div>
                         <div className="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
-                            <h5 class="text-xl font-bold">Francia</h5>
-                            <p className="text-gray-600 h-96">
-                                2. Make a travel list
+                            <h5 class="text-xl font-bold">Make a travel list</h5>
+                            <p className="text-gray-600 h-96 my-4">
                                 Designing a travel list will be one of the most important things to do when packing your luggage, since it will help you to organize your luggage efficiently and will allow you to make the most of all the space available.
                                 will help us to organize ourselves in an efficient way and will allow us to take advantage of all the space to the maximum.
 
@@ -70,10 +68,10 @@ const Europa = () => {
 
                                 Also, if you are a frequent traveler, the list will help you realize if everything you wrote down you used it
                                 or simply it was not necessary to take it, this way, the next time you pack your suitcase you can save even more space.
-                                space.</p>
+                                </p>
                         </div>
                         <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                            <small className="text-gray-500">Maria - 25/05/2019</small>
+                            <small className="text-gray-500">Peter - 25/02/2023</small>
                         </div>
 
 
@@ -84,9 +82,8 @@ const Europa = () => {
                             <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src=" https://f.fcdn.app/imgs/46b007/mispetates.com/mipeuy/18d2/original/catalogo/OHR.LH354-17-5/460x460/set-organizador-de-valija-con-6-sobres-azul.jpg" />
                         </div>
                         <div className="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
-                            <h5 className="text-xl font-bold">Shared bed</h5>
-                            <p className="text-gray-600 h-96">
-                                3. Use a compressor organizer
+                            <h5 className="text-xl font-bold">Use a compressor organizer</h5>
+                            <p className="text-gray-600 h-96  my-4">
                                 There are many types of organizers, but the best known and most practical are the packing cube compressor,
                                 ideal for saving space in your suitcase.
 
@@ -102,7 +99,7 @@ const Europa = () => {
                         </div>
 
                         <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                            <small className="text-gray-500">Maria - 25/05/2019</small>
+                            <small className="text-gray-500">Héctor - 16/06/2019</small>
                         </div>
                     </div>
 
@@ -112,7 +109,7 @@ const Europa = () => {
                         </div>
                         <div className="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
                             <h5 className="text-xl font-bold">Shared bed</h5>
-                            <p className="text-gray-600 h-96">
+                            <p className="text-gray-600 h-96 my-4">
                                 Indispensable and useful items for traveling
                                 This article surprises many people, because there are MANY travel accessories that are useful and very important for
                                 travel to Orlando, Miami or any other place abroad. Many times we don't realize it and we travel without
@@ -123,7 +120,7 @@ const Europa = () => {
 
                         </div>
                         <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                            <small className="text-gray-500">Maria - 25/05/2019</small>
+                            <small className="text-gray-500">Laura - 17/07/2019</small>
                         </div>
 
                     </div>
@@ -134,7 +131,7 @@ const Europa = () => {
                         </div>
                         <div className="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
                             <h5 className="text-xl font-bold">Waist pack</h5>
-                            <p className="text-gray-600 h-96">
+                            <p className="text-gray-600 h-96  my-4">
                             Bum Bag / Dollar Holder / Money Wallet
                                 This is a very useful and important travel accessory to avoid theft and loss of documents, money and passport. It is called variously as dole, pochete money and dollar holder. But rest assured that it is not a fanny pack that is left on the outside, which many people refuse to use.
 
@@ -143,7 +140,7 @@ const Europa = () => {
 
                         </div>
                         <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                            <small className="text-gray-500">Maria - 25/05/2019</small>
+                            <small className="text-gray-500">Catalina - 23/11/2020</small>
                         </div>
 
                     </div>
@@ -153,8 +150,8 @@ const Europa = () => {
                             <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://h7w7b8g4.stackpathcdn.com/wp-content/uploads/2018/09/carregador-portatil-celular-camera-acessorio-viagem.jpg" />
                         </div>
                         <div className="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
-                            <h5 className="text-xl font-bold">Cama compartida</h5>
-                            <p className="text-gray-600 h-96">
+                            <h5 className="text-xl font-bold">Portable charger</h5>
+                            <p className="text-gray-600 h-96  my-4">
                             Today the portable charger has become one of the most important travel accessories. The cell phone is an essential
                                 essential for traveling, be it for taking pictures, filming, using the Internet, GPS, etc. The same goes for
                                 camera. Since people use their cell phones and cameras a lot while traveling, and we are often away for the whole day, the portable
@@ -164,14 +161,14 @@ const Europa = () => {
 
                         </div>
                         <div className="flex gap-1 text-base pl-6 py-2 items-center bg-sky-100">
-                            <small className="text-gray-500">Maria - 25/05/2019</small>
+                            <small className="text-gray-500">Claudio - 15/09/2021</small>
                         </div>
 
                     </div>
 
                 </div>
-                <div className='w-full bg-orange-300 flex justify-center items-center'>
-                    <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-400 rounded-xl m-3">
+                <div className='w-full bg-orange-400 flex justify-center items-center'>
+                    <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-300 rounded-xl m-3">
                         <div className="mx-auto max-w-lg">
                             <div className="py-1">
                                 <span className="px-1 text-sm text-gray-600">Photo :</span>
@@ -234,4 +231,4 @@ const Europa = () => {
 }
 
 
-export default Europa
+export default TipsAboutLuggage

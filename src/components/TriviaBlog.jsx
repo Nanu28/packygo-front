@@ -166,7 +166,7 @@ function Trivia() {
   } else {
     display = (
       <div className="flex flex-col items-center justify-center pb-5 md:flex-row">
-        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-sky-50 rounded-lg md:w-2/3">
+        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-orange-300 rounded-lg md:w-2/4">
           <p className="text-xl text-center font-semibold md:text-2xl">Question {currentQuestion + 1}:</p>
           {question && (
             <div>
@@ -191,13 +191,13 @@ function Trivia() {
   }
 
   return (
-    <div className="bg-sky-100">
-      <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
+    <div className="bg-orange-400">
+      <div className='flex gap-1 text-base pl-6 py-2 items-center bg-orange-400'>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">
           <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
         </svg>
         <Link to="/">Home</Link>
-        <Link to="/store">/Store</Link>
+        <Link to="/blog">/Blog</Link>
         <p className='font-semibold'>/Travel trivia</p>
       </div>
 
