@@ -1,41 +1,45 @@
-
-import React, { useState } from 'react';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-
     const email = useRef();
     const password = useRef();
     const photo = useRef();
+    const name = useRef();
+    const surname = useRef();
+    const address = useRef();
+    const phone = useRef();
 
     // Función para manejar el envío del formulario
     const handleRegisterSubmit = (e) => {
         e.preventDefault();
-        let data = {
-            email: email?.current?.value,
-            password: password?.current?.value,
-            photo: photo?.current?.value,
+        const data = {
+            email: email.current.value,
+            password: password.current.value,
+            photo: photo.current.value,
+            name: name.current.value,
+            surname: surname.current.value,
+            address: address.current.value,
+            phone: phone.current.value,
         };
 
-
-        axios
-            .post("http://localhost:8000/auth/register", data)
+        console.log(data)
+        axios.post("http://localhost:8000/auth/register", data)
             .then((res) => {
-
+                // Manejar la respuesta exitosa si es necesario
             })
             .catch((error) => {
                 console.log(error);
+                // Manejar el error si es necesario
             });
     };
 
     return (
         <>
-
             <div class="relative w-full h-36 bg-cover bg-center md:h-48"
                 style={{ backgroundImage: `url('../../public/image/register_banner.png')` }}>
-                 <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
+                <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
                     <p class="text-xl text-slate-800 md:text-3xl">Your best travel itinerary</p>
                     <p class="text-base text-yellow-500 font-bold md:text-lg">begins here</p>
                     <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
@@ -72,11 +76,12 @@ const Register = () => {
                                     <span className="px-1 text-sm text-gray-600">Photo URL</span>
                                     <input
                                         ref={photo}
-                                        type="text" // Cambiamos el tipo de input a "text" para cargar una URL de foto
+                                        type="text"
                                         className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
                                     />
                                 </div>
 
+                                {/* Nuevos campos para el registro */}
                                 <div className="py-1">
                                     <span className="px-1 text-sm text-gray-600">Password</span>
                                     <input
@@ -85,13 +90,46 @@ const Register = () => {
                                         className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
                                     />
                                 </div>
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Name</span>
+                                    <input
+                                        ref={name}
+                                        type="text"
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Surname</span>
+                                    <input
+                                        ref={surname}
+                                        type="text"
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Address</span>
+                                    <input
+                                        ref={address}
+                                        type="text"
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                <div className="py-1">
+                                    <span className="px-1 text-sm text-gray-600">Phone</span>
+                                    <input
+                                        ref={phone}
+                                        type="number"
+                                        className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                                    />
+                                </div>
+                                {/* Fin de nuevos campos para el registro */}
+
                                 <div className='flex justify-center '>
                                     <button
                                         className='p-1 m-3 font-bold text-white ml-5 w-28 bg-sky-800 hover:bg-yellow-600 rounded-full md:p-3'
                                         type="submit">Register
                                     </button>
                                 </div>
-
                             </div>
                         </form>
                     </div>

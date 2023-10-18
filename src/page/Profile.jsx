@@ -11,7 +11,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="w-full h-screen justify-center items-center flex bg-violet-500">
+    <div className="w-full h-screen justify-center items-center flex ">
       <div className='flex flex-col w-3/4 h-1/2 justify-around items-center flex-wrap m-8 bg-white rounded-3xl shadow-gray-950 shadow-md gap-2 py-4 md:flex-row' key={use._id}>
 
         <img src={use.photo} alt='use-card' className="h-56 w-56 rounded-3xl" />
