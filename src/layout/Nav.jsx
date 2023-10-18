@@ -75,8 +75,9 @@ const Nav = () => {
               <img className='h-8 pl-3' src="../public/image/close.png" alt="close" />
             </button>
           )}
-
-          <img className='h-10' src={logo} alt="logo_Pack&Go2" />
+          <Link to='/'>
+            <img className='h-10' src={logo} alt="logo_Pack&Go2" />
+          </Link>
         </div>
 
         {role !== null ? (
@@ -104,7 +105,7 @@ const Nav = () => {
         <form onSubmit={onSearchSubmit}>
           <div className="flex w-full h-10">
             <input
-              className='px-3 rounded-md border-3 border-sky-900'
+              className='px-3 rounded-l-lg border-3 border-sky-900'
               type="search"
               name="valueSearch"
               id=""
@@ -126,7 +127,7 @@ const Nav = () => {
                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
               />
             </svg> */}
-            <button className="btn-search px-3 bg-sky-800 hover:bg-yellow-600 rounded-md text-white text-base font-semibold">Search</button>
+            <button className="btn-search px-3 bg-sky-800 hover:bg-yellow-600 rounded-r-lg text-white text-base font-semibold">Search</button>
           </div>
         </form>
       </header>

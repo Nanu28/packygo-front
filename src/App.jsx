@@ -4,7 +4,7 @@ import Layout from './layout/Layout'
 export default function App() {
   return (
     <>
-    <body>
+    {/* <body>
       <nav className='bg-yellow-700 h-14 py-2 px-3 flex justify-between'>
         <img className='h-8' src="../public/image/hamburgerMenu.png" alt="hamburger_menu" />
         <img className='h-8' src="../public/image/logoNav.png" alt="hamburger_menu" />
@@ -26,9 +26,9 @@ export default function App() {
             </div>
             <div className="carousel-item">
               <img src="imagen3.jpg" className="d-block w-100" alt="Imagen 3" />
-            </div>
+            </div> */}
             {/* Agrega más elementos del carrusel según tus necesidades */}
-          </div>
+          {/* </div>
           <button
             className="carousel-control-prev"
             type="button"
@@ -142,7 +142,7 @@ export default function App() {
 
    <div className='bg-red-200'>
        <Layout/>
-   </div>
+   </div> */}
    
    </>
   )

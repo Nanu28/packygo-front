@@ -6,25 +6,25 @@ import Swal from 'sweetalert2';
 
 const questions = [
   {
-    question: "Por cuántos días es tu viaje?",
+    question: "How many days is your trip?",
     options: [
-      "Menos de 1 semana",
-      "Entre 1 semana y 15 días",
-      "Entre 15 días y un mes",
-      "Más de 1 mes",
+      "Less than 1 week",
+      "Between 1 week and 15 days",
+      "Between 15 days and 1 month",
+      "More than 1 month",
     ],
   },
   {
-    question: "Qué medio de transporte utilizarás?",
-    options: ["Avión", "Tren", "Auto/Bus", "Barco"],
+    question: "What means of transport will you use?",
+    options: ["Plane", "Train", "Car/Bus", "Boat"],
   },
   {
-    question: "En qué temporada viajarás?",
+    question: "In which season will you travel?",
     options: [
-      "Primavera/Verano",
-      "Otoño/Invierno",
-      "Solo primavera o verano",
-      "Solo otoño o invierno",
+      "Spring/Summer",
+      "Autumn/Winter",
+      "Spring or summer only",
+      "Autumn or winter only",
     ],
   },
 ];
@@ -135,7 +135,7 @@ function Trivia() {
     display = (
       <div className="flex flex-col justify-center">
         <p className="text-lg pb-2 text-center font-semibold md:text-2xl ">
-          ¡Gracias por completar la trivia! Aquí está tu resultado:
+        Thank you for completing the trivia! Here is your result:
         </p>
         {resultProduct && (
           <div className="flex flex-wrap justify-center px-2 py-2 shadow-gray-950 shadow-md bg-white md:my-10 md:px-0 md:mx-52">
@@ -143,12 +143,12 @@ function Trivia() {
               <img src={resultProduct.photo} alt="product" className="mx-auto" />
             </div>
             <div className="w-full md:w-1/2 lg:w-2/3 py-5 md:py-10 md:pl-10 md:px-5">
-              <p className="text-xl font-semibold my-2 md:pb-5">Producto Recomendado:</p>
+              <p className="text-xl font-semibold my-2 md:pb-5">Recommended Product:</p>
               <div className="my-2">
-                <strong>Nombre:</strong> {resultProduct.name}
+                <strong>Name:</strong> {resultProduct.name}
               </div>
               <div className="my-2">
-                <strong>Descripción:</strong> {resultProduct.description}
+                <strong>Description:</strong> {resultProduct.description}
               </div>
               <button
                 className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"

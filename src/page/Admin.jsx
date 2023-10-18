@@ -163,7 +163,7 @@ const Admin = () => {
       <div className="bg-sky-100 mx-auto py-4 px-6 flex flex-col items-center gap-4 md:py-5">
         {/*Formulario de Creación*/}
         <div className="shadow-gray-950 shadow-md bg-sky-50 rounded-sm flex flex-row items-center justify-center md:w-2/4">
-          <form className="mt-4 px-2 md:px-4" onSubmit={handleSubmit}>
+          <form className="mt-4 px-2 md:px-4" onSubmit={handleCreate}>
             <p className="text-xl font-bold text-center pb-1">Add products</p>
 
             <div className="py-1">
@@ -312,13 +312,13 @@ const Admin = () => {
                         setPhoto(product.photo);
                       }}
                     >
-                      Editar
+                      Edit 
                     </button>
                     <button
                       className="bg-red-400 hover:bg-red-500 rounded-lg p-1"
                       onClick={() => handleDelete(product._id)}
                     >
-                      Eliminar
+                      Delete
                     </button>
                   </td>
                 </tr>

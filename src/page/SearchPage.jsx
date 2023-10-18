@@ -71,7 +71,7 @@ const SearchPage = () => {
       </div>
 
       <p className="text-xl bg-sky-100 pl-4">
-        Se encontraron <span className="font-bold">{filteredProducts.length}</span> resultados:
+      results <span className="font-bold">{filteredProducts.length}</span> were found:
       </p>
       <div className="bg-sky-100 flex flex-wrap justify-center gap-4 lg:p-10">
         {filteredProducts.map((product) => (
