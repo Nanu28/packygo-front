@@ -13,9 +13,9 @@ import Admin from "../page/Admin.jsx"
 import SearchPage from "../page/SearchPage.jsx"
 import Pay from "../page/Pay.jsx"
 import Blog from "../page/Blog.jsx"
-import Europa from "../page/Europa.jsx"
-import America from "../page/America.jsx"
-import Pets from "../page/Pets.jsx"
+import TipsAboutLuggage from "../page/TipsAboutLuggage.jsx"
+import AmericaAndEurope from "../page/AmericaAndEurope.jsx"
+import TravelingPets from "../page/TravelingPets.jsx"
 import About from "../page/About.jsx"
 import Trivia from "../components/TriviaBlog.jsx"
 
@@ -77,12 +77,12 @@ const Router = createBrowserRouter([
                 element: <Blog />
             },
             {
-                path: '/europa',
-                element: <Europa />
+                path: '/tipsAboutLuggage',
+                element: <TipsAboutLuggage />
             },
             {
-                path: '/america',
-                element: <America />
+                path: '/americaAndEurope',
+                element: <AmericaAndEurope />
             },
           
             {
@@ -90,8 +90,8 @@ const Router = createBrowserRouter([
                 element: <About />
             },  
             {
-                path: '/pets',
-                element: <Pets />
+                path: '/travelingPets',
+                element: <TravelingPets />
             },
             {
                 path: '/trivia',

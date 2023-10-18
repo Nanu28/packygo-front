@@ -312,13 +312,13 @@ const Admin = () => {
                         setPhoto(product.photo);
                       }}
                     >
-                      Editar
+                      Edit 
                     </button>
                     <button
                       className="bg-red-400 hover:bg-red-500 rounded-lg p-1"
                       onClick={() => handleDelete(product._id)}
                     >
-                      Eliminar
+                      Delete
                     </button>
                   </td>
                 </tr>
