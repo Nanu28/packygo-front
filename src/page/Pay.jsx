@@ -18,13 +18,32 @@ const Pay = () => {
 
   const generatePDF = () => {
     const doc = new jsPDF();
-    doc.text('Orden de Compra', 10, 10);
-    doc.text('Detalles del producto:', 10, 20);
-    // Puedes agregar más detalles al PDF según tus necesidades
-
-    doc.save('orden_de_compra.pdf');
+  
+    // Título del PDF
+    doc.setFontSize(16);
+    doc.text('Comprobante de Compra', 10, 10);
+  
+    // Detalles del producto
+    doc.setFontSize(12);
+    let yPosition = 30; // Posición vertical inicial para los detalles del producto
+  
+    cart.forEach((product, index) => {
+      doc.text(`Producto ${index + 1}: ${product.name}`, 10, yPosition);
+      yPosition += 10;
+      // Agrega otros detalles del producto según tus necesidades
+    });
+  
+    // Total a pagar
+    doc.setFontSize(14);
+    doc.text(`Total a pagar: $${total}`, 10, yPosition + 10);
+  
+    // Dirección u otros detalles
+    // Puedes agregar más detalles según sea necesario
+  
+    // Guarda el PDF con un nombre
+    doc.save('comprobante_de_compra.pdf');
   };
-
+  
   const onSuccess = (details, data) => {
     // Lógica para manejar el pago exitoso
     console.log('Pago exitoso:', details);
