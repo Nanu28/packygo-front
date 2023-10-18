@@ -93,18 +93,18 @@ const Nav = () => {
           </div>
         ) : (
           <Link to="/login" className="seeCarrito">
-            <p className="text-2xl font-medium p-4">LOGIN</p>
+            <p className="text-md font-medium p-2 mr-4 text-white bg-sky-800 hover:bg-yellow-600 rounded-full">LOGIN</p>
           </Link>
         )}
       </div>
 
       <DrawerMenu isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
 
-      <header className="bg-sky-100 h-18 flex items-center justify-center md:justify-end">
+      <header className="bg-sky-100 h-18 flex items-center justify-center">
         <form onSubmit={onSearchSubmit}>
-          <div className="flex w-full h-10 bg-red-300">
+          <div className="flex w-full h-10">
             <input
-              className='px-3 border-3 border-sky-900'
+              className='px-3 rounded-md border-3 border-sky-900'
               type="search"
               name="valueSearch"
               id=""
@@ -112,21 +112,21 @@ const Nav = () => {
               onChange={onInputChange}
               placeholder="Search here"
             />
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="icon-search w-5 bg-sky-800"
+              className="icon-search w-5 rounded-l-md bg-sky-800"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
               />
-            </svg>
-            <button className="btn-search pe-3 bg-sky-800 hover:bg-yellow-600 text-white text-base font-semibold">Search</button>
+            </svg> */}
+            <button className="btn-search px-3 bg-sky-800 hover:bg-yellow-600 rounded-md text-white text-base font-semibold">Search</button>
           </div>
         </form>
       </header>

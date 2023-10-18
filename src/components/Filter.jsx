@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 	const { active, handleCheckbox } = useContext(ProductContext);
 
 	return (
-		<div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2 ${active ? 'active' : 'text-xl font-medium'}`}>
+		<></>
+
+		/*<div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2 ${active ? 'active' : 'text-xl font-medium'}`}>
 			<div className='flex flex-col items-center justify-center gap-2 md:flex-row'>
 
 				<div className='p-1 text-base font-medium md:text-xl'>
@@ -18,7 +20,7 @@ import { Link } from 'react-router-dom';
 						name='accesories'
 						id='accesories'
 					/>
-					<label htmlFor='accesories'>Accesories</label>
+					<label className='pl-1' htmlFor='accesories'>Accesories</label>
 				</div>
 
 				<div className='p-1 text-base font-medium md:text-xl'>
@@ -28,7 +30,7 @@ import { Link } from 'react-router-dom';
 						name='waistpacks'
 						id='waistpacks'
 					/>
-					<label htmlFor='waistpacks'>Waistpacks</label>
+					<label className='pl-1' htmlFor='waistpacks'>Waistpacks</label>
 				</div>
 				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
@@ -37,7 +39,7 @@ import { Link } from 'react-router-dom';
 						name='pets'
 						id='pets'
 					/>
-					<label htmlFor='pets'>Pets</label>
+					<label className='pl-1' htmlFor='pets'>Pets</label>
 				</div>
 				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
@@ -46,7 +48,7 @@ import { Link } from 'react-router-dom';
 						name='backpacks'
 						id='backpacks'
 					/>
-					<label htmlFor='backpacks'>Backpacks</label>
+					<label className='pl-1' htmlFor='backpacks'>Backpacks</label>
 				</div>
 				<div className='p-1 text-base font-medium md:text-xl'>
 					<input
@@ -55,7 +57,7 @@ import { Link } from 'react-router-dom';
 						name='suitcases'
 						id='suitcases'
 					/>
-					<label htmlFor='suitcases'>Suitcases</label>
+					<label className='pl-1' htmlFor='suitcases'>Suitcases</label>
 				</div>
 
 				<Link to={'/cart'} className='p-1 w-14 md:w-20'>
@@ -63,7 +65,7 @@ import { Link } from 'react-router-dom';
 				</Link>
 				
 			</div>
-		</div>
+		</div> */
 	);
 };
 export default Filter;
