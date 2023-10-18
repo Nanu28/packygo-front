@@ -6,25 +6,25 @@ import Swal from 'sweetalert2';
 
 const questions = [
   {
-    question: "Por cuántos días es tu viaje?",
+    question: "How many days is your trip?",
     options: [
-      "Menos de 1 semana",
-      "Entre 1 semana y 15 días",
-      "Entre 15 días y un mes",
-      "Más de 1 mes",
+      "Less than 1 week",
+      "Between 1 week and 15 days",
+      "Between 15 days and 1 month",
+      "More than 1 month",
     ],
   },
   {
-    question: "Qué medio de transporte utilizarás?",
-    options: ["Avión", "Tren", "Auto/Bus", "Barco"],
+    question: "What means of transport will you use?",
+    options: ["Plane", "Train", "Car/Bus", "Boat"],
   },
   {
-    question: "En qué temporada viajarás?",
+    question: "In which season will you travel?",
     options: [
-      "Primavera/Verano",
-      "Otoño/Invierno",
-      "Solo primavera o verano",
-      "Solo otoño o invierno",
+      "Spring/Summer",
+      "Autumn/Winter",
+      "Spring or summer only",
+      "Autumn or winter only",
     ],
   },
 ];
@@ -135,7 +135,7 @@ function Trivia() {
     display = (
       <div className="flex flex-col justify-center">
         <p className="text-lg pb-2 text-center font-semibold md:text-2xl ">
-          ¡Gracias por completar la trivia! Aquí está tu resultado:
+        Thank you for completing the trivia! Here is your result:
         </p>
         {resultProduct && (
           <div className="flex flex-wrap justify-center px-2 py-2 shadow-gray-950 shadow-md bg-white md:my-10 md:px-0 md:mx-52">
@@ -143,12 +143,12 @@ function Trivia() {
               <img src={resultProduct.photo} alt="product" className="mx-auto" />
             </div>
             <div className="w-full md:w-1/2 lg:w-2/3 py-5 md:py-10 md:pl-10 md:px-5">
-              <p className="text-xl font-semibold my-2 md:pb-5">Producto Recomendado:</p>
+              <p className="text-xl font-semibold my-2 md:pb-5">Recommended Product:</p>
               <div className="my-2">
-                <strong>Nombre:</strong> {resultProduct.name}
+                <strong>Name:</strong> {resultProduct.name}
               </div>
               <div className="my-2">
-                <strong>Descripción:</strong> {resultProduct.description}
+                <strong>Description:</strong> {resultProduct.description}
               </div>
               <button
                 className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
@@ -166,7 +166,7 @@ function Trivia() {
   } else {
     display = (
       <div className="flex flex-col items-center justify-center pb-5 md:flex-row">
-        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-sky-50 rounded-lg md:w-2/3">
+        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-orange-300 rounded-lg md:w-2/4">
           <p className="text-xl text-center font-semibold md:text-2xl">Question {currentQuestion + 1}:</p>
           {question && (
             <div>
@@ -191,13 +191,13 @@ function Trivia() {
   }
 
   return (
-    <div className="bg-sky-100">
-      <div className='flex gap-1 text-base pl-6 py-2 items-center bg-sky-100'>
+    <div className="bg-orange-400">
+      <div className='flex gap-1 text-base pl-6 py-2 items-center bg-orange-400'>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door-fill" viewBox="0 0 16 16">
           <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
         </svg>
         <Link to="/">Home</Link>
-        <Link to="/store">/Store</Link>
+        <Link to="/blog">/Blog</Link>
         <p className='font-semibold'>/Travel trivia</p>
       </div>
 

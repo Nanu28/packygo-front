@@ -19,8 +19,8 @@ const CommentsDetail = ({ showComments }, {product}) => {
         </button>
         <div className={`accordion-collapse ${isCommentsVisible ? 'show' : 'collapse'}`} id="flush-collapseOne">
           <div className="accordion-body pl-10 border-t border-gray-300 mb-4">
-            <p>
-              By user 1</p>
+          <p className='mt-3 font-bold'>
+              By Erkan</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -28,14 +28,19 @@ const CommentsDetail = ({ showComments }, {product}) => {
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
             </div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!
+            <p className='pr-8'>
+            A perfect shopping experience! From the moment I logged on to the website 
+            until I received my product, everything was flawless. The product description
+             completely matched what I received, and navigating the site was intuitive 
+             and seamless. In addition, the delivery time was even faster than expected. 
+             I would definitely recommend this online store for the purchase of travel products.
+              5 stars without a doubt!
             </p>
           </div>
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
-            <p className='mt-3'>
-              By user 2</p>
+            <p className='mt-3 font-bold'>
+              By Erkan</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -43,12 +48,18 @@ const CommentsDetail = ({ showComments }, {product}) => {
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
+            <p className='pr-8'>
+              My shopping experience at this online store was mostly positive. 
+              The product description was accurate, and delivery arrived 
+              in a reasonable amount of time. However, I did encounter some minor
+               issues when navigating the site, such as occasional slowness and 
+               some difficulties with the checkout process. While these problems were not serious, 
+               they could be improved to provide a smoother experience.</p>
           </div>
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
-            <p className='mt-3'>
-              By user 3</p>
+          <p className='mt-3 font-bold'>
+              By Muriel</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
@@ -56,7 +67,13 @@ const CommentsDetail = ({ showComments }, {product}) => {
               <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
               <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
+            <p className='pr-8'>
+              when I received the product, I noticed some malfunctions that required 
+              me to request an exchange. The return and replacement process was 
+              relatively straightforward, but it was frustrating to have to go through
+               this in the first place. Overall, the quality of the product itself
+                was decent once I got one in good condition, but the overall experience
+                 could have been much better.</p>
           </div>
 
         </div>

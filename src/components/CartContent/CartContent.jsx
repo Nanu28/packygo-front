@@ -30,7 +30,7 @@ const CartContent = ({ product }) => {
 
       {cart.length > 0 ? (
         <>
-          <div className="bg-teal-50">
+          <div className="bg-sky-100">
           <h1 className="text-center text-2xl font-bold pt-4">Your cart</h1>
             <CartElements />
             <CartTotal />
@@ -38,7 +38,7 @@ const CartContent = ({ product }) => {
 
         </>
       ) : (
-        <div className="bg-teal-50 h-full flex flex-col items-center">
+        <div className="bg-sky-100 h-full flex flex-col items-center">
         <h2 className='text-center text-2xl font-bold pt-4'>Your cart is empty</h2>
         <img className="w-32 py-4" src="../../public/image/cartEmpty.png" alt="cartEmpty_image" />
         </div>
