@@ -9,6 +9,7 @@ import logo from '../../public/image/logoNav2.png'
 
 const Nav = () => {
   const user = localStorage.getItem("user");
+  //console.log(user)
   const userObject = JSON.parse(user);
   const role = userObject ? userObject.role : null;
   const photoObject = JSON.parse(user);

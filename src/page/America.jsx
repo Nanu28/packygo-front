@@ -102,8 +102,8 @@ const America = () => {
 
             </div>
 
-            <div className='w-full bg-orange-300 flex justify-center items-center'>
-            <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-400 rounded-xl m-3">
+            <div className='w-full 00 bg-orange-400 flex justify-center items-center'>
+            <form className="mt-8 p-3 w-full md:w-1/2 bg-orange-300 rounded-xl m-3">
                             <div className="mx-auto max-w-lg">
                                 <div className="py-1">
                                     <span className="px-1 text-sm text-gray-600">Photo :</span>
