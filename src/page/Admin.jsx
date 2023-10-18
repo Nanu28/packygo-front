@@ -255,7 +255,7 @@ const Admin = () => {
                 Photo
               </label>
               <input
-                type="file"
+                type="text"
                 id="photo"
                 onChange={handleImageUpload}
                 className="w-full p-1 border rounded-md"
@@ -425,7 +425,7 @@ const Admin = () => {
                     Photo
                   </label>
                   <input
-                    type="file"
+                    type="text"
                     onChange={handleImageUpload}
                     className="w-full p-2 border rounded-md"
                   />
