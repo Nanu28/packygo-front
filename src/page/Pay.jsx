@@ -1,29 +1,65 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { PayPalButton } from 'react-paypal-button-v2';
+import jsPDF from 'jspdf';
 
 const Pay = () => {
+  const { total } = useParams(); // Obtén el total de la URL
 
-  
-    const { total} = useParams();
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
+  const paypalOptions = {
+    clientId: 'ARg6xp3qWZd3iZm3562vjDU6TVavQw_1xbLwvVT3E169PvdG9U8yL0NRHc9ahMj_UjocCubpXCzAWQDv',
+  };
+
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    doc.text('Orden de Compra', 10, 10);
+    doc.text('Detalles del producto:', 10, 20);
+    // Puedes agregar más detalles al PDF según tus necesidades
+
+    doc.save('orden_de_compra.pdf');
+  };
+
+  const onSuccess = (details, data) => {
+    // Lógica para manejar el pago exitoso
+    console.log('Pago exitoso:', details);
+
+    if (details.status === 'COMPLETED') {
+      // La transacción se completó con éxito
+      console.log('Transacción completada con éxito');
+      setSuccessMessageVisible(true);
+      generatePDF(); // Llama a la función para generar el PDF
+    } else {
+      // La transacción no se completó con éxito
+      console.log('La transacción no se completó con éxito');
+    }
+  };
+
   return (
-    <>
-                <div class="relative w-full h-36 bg-cover bg-center md:h-48"
-                style={{ backgroundImage: `url('../../public/image/register_banner.png')` }}>
-                 <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
-                    <p class="text-xl text-slate-800 md:text-3xl">Your best travel itinerary</p>
-                    <p class="text-base text-yellow-500 font-bold md:text-lg">begins here</p>
-                    <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
-                </div>
-            </div>
+    <div>
+      <div className="container mx-auto p-4">
+        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+          <div>
+            <p className="text-lg font-semibold">Detalles del producto:</p>
+            <p className="text-xl mt-2">Total: ${total}</p>
+          </div>
+        </div>
 
-            <div className='w-full h-96 bg-orange-500'>
-              <p className='bg-red-500 h-12 items-center justify-center flex'> {total} </p>
-            </div>
+        <PayPalButton
+          amount={total}
+          options={paypalOptions}
+          onSuccess={onSuccess}
+        />
 
+        {successMessageVisible && (
+          <div className="mt-4 bg-green-200 p-4 rounded-lg shadow-md">
+            <p className="text-green-600 text-lg">¡La compra ha sido realizada con éxito!</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default Pay
+export default Pay;

@@ -8,13 +8,16 @@ import { DataContext, DataProvider } from './components/Context/DataContext.jsx'
 
 
 
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ 
      <DataProvider>
       <ProductProvider>
          <RouterProvider router={Router} />
       </ProductProvider>
       </DataProvider>
 
-  </React.StrictMode>,
+ 
 )
