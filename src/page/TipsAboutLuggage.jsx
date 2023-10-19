@@ -108,7 +108,7 @@ const TipsAboutLuggage = () => {
                             <img className='h-56 object-cover w-full rounded-ss-full rounded-t-full ' src="https://h7w7b8g4.stackpathcdn.com/wp-content/uploads/2018/09/Acessorios-de-viagem.jpg" />
                         </div>
                         <div className="bg-gray-100 min-h-1/2 p-4 flex flex-col justify-between">
-                            <h5 className="text-xl font-bold">Shared bed</h5>
+                            <h5 className="text-xl font-bold">Travel Accessories</h5>
                             <p className="text-gray-600 h-96 my-4">
                                 Indispensable and useful items for traveling
                                 This article surprises many people, because there are MANY travel accessories that are useful and very important for

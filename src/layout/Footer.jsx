@@ -1,9 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import tel from '../../public/image/tel.png'
-import insta from '../../public/image/insta.png'
-import face from '../../public/image/face.png'
-import correo from '../../public/image/correo.png'
 
 
 function Footer() {
@@ -18,11 +14,11 @@ function Footer() {
         <Link className='flex items-center font-semibold text-lg'>Stores</Link>
       </div>
 
-      <div className=' flex flex-col w-3/4 md:w-1/4 h-auto justify-around ml-4'>
+      <div className=' flex flex-col w-3/4 md:w-1/4 h-auto justify-around ml-4 pb-2 gap-1 md:gap-0'>
         <p className=' font-bold text-xl w-3/4'> CONCTACT:</p>
-        <Link className='flex items-center font-medium text-lg w-1/4'><img className='w-8 me-1' src={insta} alt="" />Instagram</Link>
-        <Link className='flex items-center font-medium text-lg w-1/4'><img className='w-8 me-1' src={face} alt="" />Facebook</Link>
-        <Link className='flex items-center font-medium text-lg w-1/4'><img className='w-8 me-1' src={correo} alt="" /> packygo@gmail.com</Link>
+        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../public/image/instagramIcon.png" alt="instagram_icon" />Instagram</Link>
+        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../public/image/facebookIcon.png" alt="facebook_icon" />Facebook</Link>
+        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../public/image/emailIcon.png" alt="email_icon" /> packygo@gmail.com</Link>
       </div>
 
       <div className='flex items-center'>
