@@ -16,10 +16,10 @@ const SearchPage = () => {
   };
 
   // Estado inicial con una categoría ficticia que no existe
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category === selectedCategory ? 'All' : category);
+    setSelectedCategory(category === selectedCategory ? 'all' : category);
   };
 
   // Verifica que location.state sea una cadena y conviértela a minúsculas
@@ -28,7 +28,7 @@ const SearchPage = () => {
   // Filtra los productos según la categoría seleccionada y el criterio de búsqueda
   const filteredProducts = data.filter((product) => {
     return (
-      (selectedCategory === 'All' || product.category.name === selectedCategory) &&
+      (selectedCategory === 'all' || product.category.name === selectedCategory) &&
       product.name.toLowerCase().includes(searchQuery)
     );
   });
@@ -46,7 +46,7 @@ const SearchPage = () => {
 
       <div className={`flex-grow bg-gray-200 text-gray-500 my-2 py-2`}>
         <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
-          {['All', ...data.reduce((categories, product) => {
+          {['all', ...data.reduce((categories, product) => {
             if (!categories.includes(product.category.name)) {
               categories.push(product.category.name);
             }

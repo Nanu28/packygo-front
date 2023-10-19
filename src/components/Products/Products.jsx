@@ -48,7 +48,7 @@ const Products = ({ selectedCategory }) => {
 
   const productsPerPage = 9;
   const pagesVisited = pageNumber * productsPerPage;
-  const filteredData = selectedCategory === 'All' 
+  const filteredData = selectedCategory === 'all' 
     ? data
     : data.filter((product) => product.category.name === selectedCategory);
   const displayedCards = filteredData.slice(pagesVisited, pagesVisited + productsPerPage);

@@ -38,11 +38,12 @@ function Trivia() {
   const user = localStorage.getItem("user");
   const userObject = JSON.parse(user);
   const role = userObject ? userObject.role : null;
+ 
 
 
   // Agrega los ID de productos según la mayoría de respuestas
   const productIDs = {
-    A: '652bdfa0db266e71a5175c18',
+    A: '653053003fb4f69052bfd9f5',
     B: '652bdfa0db266e71a5175c0f',
     C: '652bdfa0db266e71a5175c0c',
     D: '652bdf9fdb266e71a5175c03',
@@ -93,7 +94,7 @@ function Trivia() {
     // Realizar una solicitud a tu base de datos para obtener el producto
     axios.get(`http://localhost:8000/products/${resultProductID}`)
       .then((response) => {
-        console.log(response.data.product)
+        console.log(response.data)
         setResultProduct(response.data.product);
       })
       .catch((error) => {
@@ -118,9 +119,10 @@ function Trivia() {
       });
     } else {
       setCart([...cart, product]);
+      console.log(cart)
     }
   };
-  
+  console.log(resultProduct)
   useEffect(() => {
     if (showResult) {
       calculateResult();
