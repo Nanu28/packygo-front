@@ -15,7 +15,7 @@ const DescriptionDetails = ({ showComments, toggleComments, product }) => {
 
   return (
     <section className='w-1/2 px-4 pt-14'>
-      <span>ID: {product._id}</span>
+      <span>Product code: {product._id}</span>
       <p className='font-extrabold'>{product.name}</p>
       <br />
       <p>Description:</p>

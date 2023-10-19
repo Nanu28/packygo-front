@@ -4,6 +4,7 @@ import ConfirmationModal from '../ConfirmacionModal.jsx';
 import axios from "axios";
 import { DataContext } from "../Context/DataContext.jsx";
 
+
 const Products = ({ selectedCategory }) => {
   const navigate = useNavigate();
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -47,7 +48,7 @@ const Products = ({ selectedCategory }) => {
 
   const productsPerPage = 9;
   const pagesVisited = pageNumber * productsPerPage;
-  const filteredData = selectedCategory === 'todos' 
+  const filteredData = selectedCategory === 'all' 
     ? data
     : data.filter((product) => product.category.name === selectedCategory);
   const displayedCards = filteredData.slice(pagesVisited, pagesVisited + productsPerPage);
@@ -71,12 +72,20 @@ const Products = ({ selectedCategory }) => {
       </button>
     );
   }
+  function rotateText(button) {
+    button.classList.add("rotated");
+  }
+  
+  function unrotateText(button) {
+    button.classList.remove("rotated");
+  }
+  
 
   return (
     <>
       <section className="flex flex-wrap justify-center gap-4 lg:p-10">
         {displayedCards.map((card, _id) => (
-          <div key={_id} className="w-72 h-fit items-center py-2 shadow-gray-950 shadow-md bg-sky-50 flex flex-col rounded-lg">
+          <div key={_id} className="w-72 h-fit items-center py-2 shadow-gray-950 shadow-md bg-white flex flex-col rounded-lg">
             <div>
               <img className='rounded-lg w-40 h-56 bg-cover' src={card.photo} alt="" />
             </div>
@@ -90,7 +99,7 @@ const Products = ({ selectedCategory }) => {
                   className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
                   onClick={() => buyProduct(card)}
                 >
-                  Buy
+                  Add
                 </button>
               ) : null}
               <Link
