@@ -167,8 +167,8 @@ function Trivia() {
     );
   } else {
     display = (
-      <div className="flex flex-col items-center justify-center pb-5 md:flex-row">
-        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-orange-300 rounded-lg md:w-2/4">
+      <div className="flex flex-col items-center justify-center pb-5 md:flex-row ">
+        <div className="w-2/3 mx-2 p-10 items-center shadow-gray-950 shadow-md bg-orange-300 rounded-lg md:w-2/4 mt-20 mb-24">
           <p className="text-xl text-center font-semibold md:text-2xl">Question {currentQuestion + 1}:</p>
           {question && (
             <div>
