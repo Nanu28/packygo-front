@@ -22,11 +22,11 @@ const CommentsDetail = ({ showComments }, {product}) => {
           <p className='mt-3 font-bold'>
               By Erkan</p>
             <div className='flex'>
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
             </div>
             <p className='pr-8'>
             A perfect shopping experience! From the moment I logged on to the website 
@@ -42,11 +42,11 @@ const CommentsDetail = ({ showComments }, {product}) => {
             <p className='mt-3 font-bold'>
               By Erkan</p>
             <div className='flex'>
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
             </div>
             <p className='pr-8'>
               My shopping experience at this online store was mostly positive. 
@@ -61,11 +61,11 @@ const CommentsDetail = ({ showComments }, {product}) => {
           <p className='mt-3 font-bold'>
               By Muriel</p>
             <div className='flex'>
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-              <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
-              <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+              <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
+              <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
             </div>
             <p className='pr-8'>
               when I received the product, I noticed some malfunctions that required 
@@ -106,11 +106,11 @@ export default CommentsDetail;
 //               <div className="accordion-body pl-10 border-t border-gray-300 mb-4">
 //                 <p>Por Usuario 1</p>
 //                 <div className='flex'>
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
 //                 </div>
 //                 <p>
 //                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!
@@ -120,11 +120,11 @@ export default CommentsDetail;
 //               <div className='pl-10 border-t border-gray-300 mb-4'>
 //                 <p>Por Usuario 2</p>
 //                 <div className='flex'>
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
 //                 </div>
 //                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
 //               </div>
@@ -132,11 +132,11 @@ export default CommentsDetail;
 //               <div className='pl-10 border-t border-gray-300 mb-4'>
 //                 <p>Por Usuario 3</p>
 //                 <div className='flex'>
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
-//                   <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
+//                   <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
 //                 </div>
 //                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
 //               </div>
@@ -168,11 +168,11 @@ export default CommentsDetail;
 //               <div className="accordion-body pl-10 border-t border-gray-300 mb-4">
 //                 <p>Por Usuario 1</p>
 //                 <div className='flex'>
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
 //                 </div>
 //                 <p>
 //                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!
@@ -182,11 +182,11 @@ export default CommentsDetail;
 //               <div className='pl-10 border-t border-gray-300 mb-4'>
 //                 <p>Por Usuario 2</p>
 //                 <div className='flex'>
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
 //                 </div>
 //                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
 //               </div>
@@ -194,11 +194,11 @@ export default CommentsDetail;
 //               <div className='pl-10 border-t border-gray-300 mb-4'>
 //                 <p>Por Usuario 3</p>
 //                 <div className='flex'>
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-//                   <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
-//                   <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+//                   <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
+//                   <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
 //                 </div>
 //                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
 //               </div>

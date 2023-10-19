@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { DataProvider, DataContext } from '../components/Context/DataContext.jsx';
 import Products from '../components/Products/Products.jsx';
-import carro from '../../public/image/maletas.png';
+import carro from '../../image/maletas.png';
 
 function Store() {
   const [category, setCategory] = useState([]);
@@ -62,12 +62,12 @@ function Store() {
 
   return (
     <>
-      <div className="relative w-full h-40 bg-cover bg-center md:h-48" style={{ backgroundImage: `url('../../public/image/store_banner.png')` }}>
+      <div className="relative w-full h-40 bg-cover bg-center md:h-48" style={{ backgroundImage: `url('../../image/store_banner.png')` }}>
         <div className="flex flex-col w-full pt-8 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
           <p className="text-lg text-slate-800 md:text-3xl">Welcome to the paradise</p>
           <p className="text-lg text-slate-800 md:text-3xl">of travelers</p>
           <p className="text-base text-yellow-500 font-bold md:text-lg">All you need is here</p>
-          <img className="w-6 md:mt-3 md:w-10" src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+          <img className="w-6 md:mt-3 md:w-10" src="../../image/arrow_banner.png" alt="arrow_banner" />
         </div>
       </div>    
    

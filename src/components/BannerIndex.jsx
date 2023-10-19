@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const BannerIndex = () => {
   return (
-    <section className="flex flex-col bg-[url('../public/image/backgroundLetsGo.png')] bg-cover bg-center md:flex-row">
+    <section className="flex flex-col bg-[url('../image/backgroundLetsGo.png')] bg-cover bg-center md:flex-row">
       <div className='w-48 flex self-center md:w-1/3'>
-        <img className='pt-4' src="../public/image/girlTravel.png" alt="image_girlTravel" />
+        <img className='pt-4' src="../image/girlTravel.png" alt="image_girlTravel" />
       </div>
       <div className='w-full flex flex-col justify-center md:w-1/2 md:py-4'>
         <p className='text-4xl pl-10'>Let's Go</p>

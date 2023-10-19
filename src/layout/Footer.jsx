@@ -16,9 +16,9 @@ function Footer() {
 
       <div className=' flex flex-col w-3/4 md:w-1/4 h-auto justify-around ml-4 pb-2 gap-1 md:gap-0'>
         <p className=' font-bold text-xl w-3/4'> CONCTACT:</p>
-        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../public/image/instagramIcon.png" alt="instagram_icon" />Instagram</Link>
-        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../public/image/facebookIcon.png" alt="facebook_icon" />Facebook</Link>
-        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../public/image/emailIcon.png" alt="email_icon" /> packygo@gmail.com</Link>
+        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../image/instagramIcon.png" alt="instagram_icon" />Instagram</Link>
+        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../image/facebookIcon.png" alt="facebook_icon" />Facebook</Link>
+        <Link className='flex items-center font-medium text-lg w-1/4'><img className='me-1 w-7 md:w-8' src="../image/emailIcon.png" alt="email_icon" /> packygo@gmail.com</Link>
       </div>
 
       <div className='flex items-center'>
@@ -27,7 +27,7 @@ function Footer() {
           <p className=' font-medium text-lg'> All rights reserved </p>
         </div>
         <div>
-          <img className='w-48 h-36' src="../public/image/logoNav.png" alt="logo_Pack&Go" />
+          <img className='w-48 h-36' src="../image/logoNav.png" alt="logo_Pack&Go" />
         </div>
       </div>
 

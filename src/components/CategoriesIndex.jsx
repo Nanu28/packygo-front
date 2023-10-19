@@ -46,7 +46,7 @@ const CategoriesIndex = () => {
       <div className="grid grid-cols-1 md:grid-cols-2  lg:gird-cols-3 gap-4">
         <div className="relative inline-block md:mr-10" style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Link to="/store">
-            <img className="opacity-80" src="../public/image/pet's_accesories.png" alt="pet's_accesories_category" style={imageStyle} />
+            <img className="opacity-80" src="../image/pet's_accesories.png" alt="pet's_accesories_category" style={imageStyle} />
             <div className="text-container" style={textContainerStyle}>
               <button className="bg-gradient-to-r from-amber-500 via-amber-400 to-orange-200 p-2 rounded-2xl text-sky-800 text-xl text-center font-bold md:text-4xl">Pet's Accesories</button>
             </div>
@@ -54,7 +54,7 @@ const CategoriesIndex = () => {
         </div>
         <div className="relative inline-block md:ml-10" style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Link to="/store">
-            <img className="opacity-80" src="../public/image/suitcases.png" alt="suitcases_category" style={imageStyle} />
+            <img className="opacity-80" src="../image/suitcases.png" alt="suitcases_category" style={imageStyle} />
             <div className="text-container" style={textContainerStyle}>
               <button className="bg-gradient-to-r from-amber-500 via-amber-400 to-orange-200 p-2 rounded-2xl text-sky-800 text-xl text-center font-bold md:text-4xl">Suitcases</button>
             </div>
@@ -62,7 +62,7 @@ const CategoriesIndex = () => {
         </div>
         <div className="relative inline-block md:mr-10" style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Link to="/store">
-            <img className="opacity-80" src="../public/image/backpacks.png" alt="backpacks_category" style={imageStyle} />
+            <img className="opacity-80" src="../image/backpacks.png" alt="backpacks_category" style={imageStyle} />
             <div className="text-container" style={textContainerStyle}>
               <button className="bg-gradient-to-r from-amber-500 via-amber-400 to-orange-200 p-2 rounded-2xl text-sky-800 text-xl text-center font-bold md:text-4xl">Backpacks</button>
             </div>
@@ -70,7 +70,7 @@ const CategoriesIndex = () => {
         </div>
         <div className="relative inline-block md:ml-10" style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Link to="/store">
-            <img className="opacity-80" src="../public/image/travel_accesories.png" alt="travel_accesories_category" style={imageStyle} />
+            <img className="opacity-80" src="../image/travel_accesories.png" alt="travel_accesories_category" style={imageStyle} />
             <div className="text-container" style={textContainerStyle}>
               <button className="bg-gradient-to-r from-amber-500 via-amber-400 to-orange-200 p-2 rounded-2xl text-sky-800 text-xl text-center font-bold md:text-4xl">Travel Accesories</button>
             </div>

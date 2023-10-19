@@ -4,8 +4,8 @@ import { ProductContext } from '../components/Context/ProductContext.jsx';
 import { DataContext } from '../components/Context/DataContext.jsx';
 import DrawerMenu from '../components/DrawerMenu.jsx';
 import TotalItems from "../components/CartContent/TotalItems.jsx";
-import hamburguesa from '../../public/image/hamburgerMenu.png'
-import logo from '../../public/image/logoNav2.png'
+import hamburguesa from '../../image/hamburgerMenu.png'
+import logo from '../../image/logoNav2.png'
 
 const Nav = () => {
   const user = localStorage.getItem("user");
@@ -47,7 +47,7 @@ const Nav = () => {
             <img onClick={toggleDrawer} className='h-10 cursor-pointer pl-4' src={hamburguesa} alt="hamburger_menu" />
           ) : (
             <button ref={closeNavButtonRef} onClick={toggleDrawer} className='h-10 cursor-pointer rounded-full p-1'>
-              <img className='h-8 pl-3' src="../public/image/close.png" alt="close" />
+              <img className='h-8 pl-3' src="../image/close.png" alt="close" />
             </button>
           )}
           <Link to='/'>
@@ -73,10 +73,10 @@ const Nav = () => {
         {role !== null ? (
           <div className='flex p-3 justify-around'>
             <Link to="/profile" className="flex items-center">
-              <img className='h-12 w-12 rounded-xl' src={profile || "../public/image/botonUsuario.png"} alt="boton_usuario" />
+              <img className='h-12 w-12 rounded-xl' src={profile || "../image/botonUsuario.png"} alt="boton_usuario" />
             </Link>
             <Link to={'/cart'} className='flex items-center flex-col-reverse px-2 pb-2 '>
-              <img className='h-12 -m-4 md:ml-3' src="../public/image/cartNav.png" alt="carro" />
+              <img className='h-12 -m-4 md:ml-3' src="../image/cartNav.png" alt="carro" />
               <div className="relative">
                 <TotalItems />
               </div>
@@ -105,8 +105,8 @@ export default Nav;
 // import { DataContext } from '../components/Context/DataContext.jsx';
 // import DrawerMenu from '../components/DrawerMenu.jsx';
 // import TotalItems from "../components/CartContent/TotalItems.jsx";
-// import hamburguesa from '../../public/image/hamburgerMenu.png'
-// import logo from '../../public/image/logoNav2.png'
+// import hamburguesa from '../../image/hamburgerMenu.png'
+// import logo from '../../image/logoNav2.png'
 
 // const Nav = () => {
 //   const user = localStorage.getItem("user");
@@ -174,7 +174,7 @@ export default Nav;
 //             <img onClick={toggleDrawer} className='h-10 cursor-pointer pl-4' src={hamburguesa} alt="hamburger_menu" />
 //           ) : (
 //             <button ref={closeNavButtonRef} onClick={toggleDrawer} className='h-10 cursor-pointer rounded-full p-1'>
-//               <img className='h-8 pl-3' src="../public/image/close.png" alt="close" />
+//               <img className='h-8 pl-3' src="../image/close.png" alt="close" />
 //             </button>
 //           )}
 //           <Link to='/'>
@@ -185,10 +185,10 @@ export default Nav;
 //         {role !== null ? (
 //           <div className='flex p-3 justify-around'>
 //             <Link to="/profile" className="flex items-center">
-//               <img className='h-12 w-12 rounded-xl' src={profile || "../public/image/botonUsuario.png"} alt="boton_usuario" />
+//               <img className='h-12 w-12 rounded-xl' src={profile || "../image/botonUsuario.png"} alt="boton_usuario" />
 //             </Link>
 //             <Link to={'/cart'} className='flex items-center'>
-//               <img className='h-12 md:ml-3' src="../public/image/cartNav.png" alt="carro" />
+//               <img className='h-12 md:ml-3' src="../image/cartNav.png" alt="carro" />
 //               <div className="relative">
 //                 <TotalItems />
 //               </div>

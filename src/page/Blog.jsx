@@ -18,9 +18,9 @@ const Blog = () => {
 
             <div className="hidden md:block">
                 <Carousel autoSlide={true} autoSlideInterval={5000}>
-                    <img className='w-full' src="../public/image/carouselBlog1.png" alt="carousel_blog1" />
-                    <img className='w-full' src="../public/image/carouselBlog2.png" alt="carousel_blog2" />
-                    <img className='w-full' src="../public/image/carouselBlog3.png" alt="carousel_blog3" />
+                    <img className='w-full' src="../image/carouselBlog1.png" alt="carousel_blog1" />
+                    <img className='w-full' src="../image/carouselBlog2.png" alt="carousel_blog2" />
+                    <img className='w-full' src="../image/carouselBlog3.png" alt="carousel_blog3" />
                 </Carousel>
             </div>
 
@@ -34,22 +34,22 @@ const Blog = () => {
                 <div className='bg-orange-400 w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-6'>
 
                     <div className="relative inline-block">
-                        <img className='opacity-80' src="../public/image/travelBlog.png" alt="pet's_accesories_category" />
+                        <img className='opacity-80' src="../image/travelBlog.png" alt="pet's_accesories_category" />
                         <button onClick={() => navigate('/americaAndEurope')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Latin America and Europe</button>
                     </div>
 
                     <div className="relative inline-block">
-                        <img className='opacity-80' src="../public/image/tipsBlog.png" alt="pet's_accesories_category" />
+                        <img className='opacity-80' src="../image/tipsBlog.png" alt="pet's_accesories_category" />
                         <button onClick={() => navigate('/tipsAboutLuggage')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Tips about luggage</button>
                     </div>
 
                     <div className="relative inline-block">
-                        <img className='opacity-80' src="../public/image/travelPetsBlog.png" alt="pet's_accesories_category" />
+                        <img className='opacity-80' src="../image/travelPetsBlog.png" alt="pet's_accesories_category" />
                         <button onClick={() => navigate('/travelingPets')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Traveling with pets</button>
                     </div>
 
                     <div className="relative inline-block">
-                        <img className='opacity-80' src="../public/image/triviaBlog.png" alt="pet's_accesories_category" />
+                        <img className='opacity-80' src="../image/triviaBlog.png" alt="pet's_accesories_category" />
                         <button onClick={() => navigate('/trivia')} className="absolute inset-0 flex flex-col items-center justify-center text-white text-xs text-center font-bold md:text-2xl md:px-12">Trivia</button>
                     </div>
 

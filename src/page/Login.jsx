@@ -38,12 +38,12 @@ const Login = () => {
     return (
         <>
             <div class="relative w-full h-36 bg-cover bg-bottom md:h-48"
-                style={{ backgroundImage: `url('../../public/image/login_banner.png')` }}>
+                style={{ backgroundImage: `url('../../image/login_banner.png')` }}>
                 <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
                     <p class="text-xl text-slate-800 md:text-3xl">Nice to see you again</p>
                     <p class="text-xl text-slate-800 md:text-3xl">enjoy your</p>
                     <p class="text-base text-yellow-500 font-bold md:text-lg">pack&Go trip</p>
-                    <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+                    <img className='w-6 mt-3 md:w-10' src="../../image/arrow_banner.png" alt="arrow_banner" />
                 </div>
             </div>
 

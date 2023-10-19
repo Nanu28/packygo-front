@@ -9,13 +9,13 @@ const CartContent = ({ product }) => {
 
   return (
     <>
-      <div class="relative w-full h-36 bg-cover bg-center md:h-48"
-        style={{ backgroundImage: `url('../../public/image/cart_banner.png')` }}>
+      <div class="relative w-full h-36 bg-cover bg-center md:h-72"
+        style={{ backgroundImage: `url('../../image/cart_banner.png')` }}>
         <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
           <p class="text-xl text-slate-800 md:text-3xl">Nice to see you again</p>
           <p class="text-xl text-slate-800 md:text-3xl">enjoy your</p>
           <p className="text-base text-yellow-500 font-bold md:text-lg">pack&Go trip</p>
-          <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+          <img className='w-6 mt-3 md:w-10' src="../../image/arrow_banner.png" alt="arrow_banner" />
         </div>
       </div>
 
@@ -40,7 +40,7 @@ const CartContent = ({ product }) => {
       ) : (
         <div className="bg-sky-100 h-full flex flex-col items-center">
         <h2 className='text-center text-2xl font-bold pt-4'>Your cart is empty</h2>
-        <img className="w-32 py-4" src="../../public/image/cartEmpty.png" alt="cartEmpty_image" />
+        <img className="w-32 py-4" src="../../image/cartEmpty.png" alt="cartEmpty_image" />
         </div>
       )}
     </>

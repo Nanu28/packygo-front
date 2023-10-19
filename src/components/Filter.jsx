@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react';
 import  {ProductContext}  from '../components/Context/ProductContext.jsx';
-import carro from '../../public/image/maletas.png'
+import carro from '../../image/maletas.png'
 import { Link } from 'react-router-dom';
 
  const Filter = () => {

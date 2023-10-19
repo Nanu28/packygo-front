@@ -40,12 +40,12 @@ const Details = () => {
     <>
 
       <div class="relative w-full h-36 bg-cover bg-center md:h-48"
-        style={{ backgroundImage: `url('../../public/image/details_banner.png')` }}>
+        style={{ backgroundImage: `url('../../image/details_banner.png')` }}>
         <div class="flex flex-col w-full items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 md:p-8">
           <p class="text-xl text-slate-800 md:text-3xl">We give you what you need to</p>
           <p class="text-xl text-slate-800 md:text-3xl">make</p>
           <p className="text-base text-yellow-500 font-bold md:text-lg"> the right decision</p>
-          <img className='w-6 mt-3 md:w-10' src="../../public/image/arrow_banner.png" alt="arrow_banner" />
+          <img className='w-6 mt-3 md:w-10' src="../../image/arrow_banner.png" alt="arrow_banner" />
         </div>
       </div>
 

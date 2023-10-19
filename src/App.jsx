@@ -7,11 +7,11 @@ export default function App() {
     <>
     {/* <body>
       <nav className='bg-yellow-700 h-14 py-2 px-3 flex justify-between'>
-        <img className='h-8' src="../public/image/hamburgerMenu.png" alt="hamburger_menu" />
-        <img className='h-8' src="../public/image/logoNav.png" alt="hamburger_menu" />
+        <img className='h-8' src="../image/hamburgerMenu.png" alt="hamburger_menu" />
+        <img className='h-8' src="../image/logoNav.png" alt="hamburger_menu" />
         <div className='flex gap-3'>
-          <img className='h-10' src="../public/image/botonUsuario.png" alt="boton_usuario" />
-          <img className='h-10' src="../public/image/maleta.png" alt="maleta" />
+          <img className='h-10' src="../image/botonUsuario.png" alt="boton_usuario" />
+          <img className='h-10' src="../image/maleta.png" alt="maleta" />
         </div>
       </nav>
 
@@ -81,11 +81,11 @@ export default function App() {
         <section className='pl-10 border-t border-gray-300 mb-4'>
           <p>Por Usuario 1</p>
           <div className='flex'>
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
           </div>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
         </section>
@@ -93,11 +93,11 @@ export default function App() {
         <section className='pl-10 border-t border-gray-300 mb-4'>
           <p>Por Usuario 2</p>
           <div className='flex'>
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
           </div>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
         </section>
@@ -105,11 +105,11 @@ export default function App() {
         <section className='pl-10 border-t border-gray-300 mb-4'>
           <p>Por Usuario 2</p>
           <div className='flex'>
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
-            <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
-            <img className='w-8' src="../public/image/starGrey.png" alt="star_grey" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGold.png" alt="star_gold" />
+            <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
+            <img className='w-8' src="../image/starGrey.png" alt="star_grey" />
           </div>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, cumque. Inventore consequuntur quaerat suscipit sint nobis. Molestias soluta quaerat, accusantium similique praesentium a architecto repellat inventore culpa debitis? Dolores, beatae!</p>
         </section>
@@ -133,7 +133,7 @@ export default function App() {
         </div>
         <div className='flex flex-col justify-center'>
           <p className='font-bold'>Pack & Go</p>
-          <img className='w-14' src="../public/image/qrPackygo.png" alt="qr_Packygo" />
+          <img className='w-14' src="../image/qrPackygo.png" alt="qr_Packygo" />
           <p className='font-bold'>Pack & Go 2023-</p>
           <p>Todos los derechos reservados</p>
         </div>

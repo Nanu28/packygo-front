@@ -4,7 +4,7 @@ import Products from '../components/Products/Products.jsx';
 import { DataProvider, DataContext } from '../components/Context/DataContext.jsx';
 import { useNavigate } from "react-router-dom";
 import Filter from './../components/Filter.jsx';
-import carro from '../../public/image/maletas.png';
+import carro from '../../image/maletas.png';
 
 const SearchPage = () => {
   const navigate = useNavigate();
