@@ -30,59 +30,6 @@ function Index() {
         </Carousel>
       </div>
 
-      {/* <section className="w-full h-full relative  bg-gradient-to-b from-cyan-100 to-cyan-300 ">
-        <div className="w-full flex-col flex md:flex-row justify-around items-center bg-tramsparent">
-          <div className="md:w-1/3 bg-tramsparent rounded-lg shadow">
-            <div >
-              <div className="min-h-full flex flex-col items-center bg-gradient-to-b from-cyan-100 to-cyan-300 ">
-                <p className="mb-2 text-xl font-bold tracking-wide text-gray-900">
-                  Sobre nosotros
-                </p>
-                <p className="mb-3 font-normal text-[18px] text-center text-gray-700">
-                  Pequeña descripcion expedita este. Enim atque fugiat earum nesciunt neque!
-                </p>
-              </div>
-              <Valoraciones
-                title="MISION"
-                description="Pequeña descripción expedita este. Enim atque fugiat earum nesciunt neque!"
-                imageSrc={prueba1}
-              />
-
-              <Valoraciones
-                title="VISION"
-                description="Pequeña descripción expedita este. Enim atque fugiat earum nesciunt neque!"
-                imageSrc={prueba2}
-              />
-
-            </div>
-          </div>
-
-          <div className="md:w-1/3  bg-tramsparent rounded-lg shadow">
-            <div >
-              <div className="min-h-full flex flex-col items-center bg-gradient-to-b from-cyan-100 to-cyan-300 ">
-                <p className="mb-2 text-xl font-bold tracking-wide text-gray-900 ">
-                  Calificaciones de clientes
-                </p>
-                <p className="mb-3 font-normal text-[18px] text-center text-gray-700">
-                  Pequeña descripcion expedita este. Enim atque fugiat earum nesciunt neque!
-                </p>
-              </div>
-              <Valoraciones
-                title="Valoraciones Pepa"
-                description="Pequeña descripción expedita este. Enim atque fugiat earum nesciunt neque!"
-                imageSrc={img1}
-              />
-
-              <Valoraciones
-                title="Valoraciones Fulanito"
-                description="Pequeña descripción expedita este. Enim atque fugiat earum nesciunt neque!"
-                imageSrc={img3}
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <CategoriesIndex />
 
       <VisionMision />
@@ -94,10 +41,3 @@ function Index() {
 
 export default Index
 
-// /*   style={{
-//     backgroundImage: `url('../../public/image/fondooo.png')`, // Reemplaza con la ruta correcta de tu imagen
-//     backgroundSize: 'cover', // Ajusta el tamaño de la imagen
-//     backgroundRepeat: 'no-repeat', // Evita que la imagen se repita
-//     backgroundPosition: 'center', // Centra la imagen
-    
-//   }} */

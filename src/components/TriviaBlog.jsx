@@ -154,7 +154,7 @@ function Trivia() {
                 className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-20 rounded-2xl mt-2 flex items-center justify-center"
                 onClick={() => buyProduct(resultProduct)}
               >
-                Buy
+                Add
               </button>
 
             </div>

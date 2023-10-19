@@ -41,7 +41,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className='bg-yellow-600 bg-opacity-50 h-14 w-full flex items-center justify-between rounded-xl'>
+      <div className='bg-yellow-600 bg-opacity-50 h-16 w-full flex items-center justify-between  '>
         <div className='flex items-center'>
           {isHamburgerButton ? (
             <img onClick={toggleDrawer} className='h-10 cursor-pointer pl-4' src={hamburguesa} alt="hamburger_menu" />
@@ -54,6 +54,21 @@ const Nav = () => {
             <img className='h-10' src={logo} alt="logo_Pack&Go2" />
           </Link>
         </div>
+      
+              <form onSubmit={onSearchSubmit}>
+          <div className="flex w-full h-10">
+            <input
+              className='px-3 rounded-l-lg border-3 border-sky-900 '
+              type="search"
+              name="valueSearch"
+              id=""
+              value={valueSearch}
+              onChange={onInputChange}
+              placeholder="Search here"
+            />
+            <button className="btn-search px-3 bg-sky-800 hover.bg-yellow-600 rounded-r-lg text-white text-base font-semibold">Search</button>
+          </div>
+        </form>
 
         {role !== null ? (
           <div className='flex p-3 justify-around'>
@@ -76,22 +91,6 @@ const Nav = () => {
 
       <DrawerMenu isOpen={isDrawerOpen} />
 
-      <header className="bg-sky-100 h-18 flex items-center justify-center">
-        <form onSubmit={onSearchSubmit}>
-          <div className="flex w-full h-10">
-            <input
-              className='px-3 rounded-l-lg border-3 border-sky-900'
-              type="search"
-              name="valueSearch"
-              id=""
-              value={valueSearch}
-              onChange={onInputChange}
-              placeholder="Search here"
-            />
-            <button className="btn-search px-3 bg-sky-800 hover.bg-yellow-600 rounded-r-lg text-white text-base font-semibold">Search</button>
-          </div>
-        </form>
-      </header>
     </>
   );
 };
