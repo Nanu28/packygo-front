@@ -41,7 +41,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className='bg-yellow-600 bg-opacity-50 h-14 w-full flex items-center justify-between rounded-xl'>
+      <div className='bg-yellow-600 bg-opacity-50 h-14 w-full flex items-center justify-between'>
         <div className='flex items-center'>
           {isHamburgerButton ? (
             <img onClick={toggleDrawer} className='h-10 cursor-pointer pl-4' src={hamburguesa} alt="hamburger_menu" />
@@ -60,8 +60,8 @@ const Nav = () => {
             <Link to="/profile" className="flex items-center">
               <img className='h-12 w-12 rounded-xl' src={profile || "../public/image/botonUsuario.png"} alt="boton_usuario" />
             </Link>
-            <Link to={'/cart'} className='flex items-center'>
-              <img className='h-12 md:ml-3' src="../public/image/cartNav.png" alt="carro" />
+            <Link to={'/cart'} className='flex items-center flex-col-reverse px-2 pb-2 '>
+              <img className='h-12 -m-4 md:ml-3' src="../public/image/cartNav.png" alt="carro" />
               <div className="relative">
                 <TotalItems />
               </div>
