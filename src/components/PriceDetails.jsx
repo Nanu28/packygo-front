@@ -44,10 +44,10 @@ const PriceDetails = ({ product }) => {
     <div className='flex flex-col w-full pt-2 md:px-4'>
       <div className='flex flex-col justify-between items-center pb-2 md:flex-row'>
         <p className='font-black text-xl md:pl-4 md:text-4xl'>${product.price}</p>
-        <p className='hidden md:block md:text-center md:font-bold md:text-yellow-600'> {product.stock} avalaible</p>
+        <p className='hidden md:block md:text-center md:font-bold md:text-yellow-600'> {product.stock} available</p>
       </div>
       <div className='flex items-center justify-center gap-4'>
-        <p className='md:hidden text-center text-sm font-bold text-yellow-600'> {product.stock} avalaible</p>
+        <p className='md:hidden text-center text-sm font-bold text-yellow-600'> {product.stock} available</p>
         <button
           className="bg-sky-800 hover:bg-yellow-600 text-white text-base font-bold h-8 w-32 rounded-2xl mt-2 flex items-center justify-center"
           onClick={() => {
