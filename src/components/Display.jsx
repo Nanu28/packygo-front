@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonNav from '../components/ButtonNav.jsx';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
+
+
 const Display = () => {
   const navigate = useNavigate()
-
+  const [logoutSuccess, setLogoutSuccess] = useState(false);
   const user = localStorage.getItem("user");
   const userObject = JSON.parse(user);
   const role = userObject ? userObject.role : null;
@@ -17,10 +19,13 @@ const Display = () => {
   const headers = { headers: { "authorization": `Bearer ${userToken}` } };
 
   const logout = async () => {
-    axios.post("http://localhost:8000/users/signout")
+    console.log('Logout button clicked')
+    axios.post("http://localhost:8000/users/signout",null, headers)
       .then(res => {
+        console.log(res)
         localStorage.clear();
-        /*   navigate("/"); */
+        setLogoutSuccess(true);
+        navigate('/login');
       })
       .catch(res => console.log(res));
   };

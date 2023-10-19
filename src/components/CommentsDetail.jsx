@@ -40,7 +40,7 @@ const CommentsDetail = ({ showComments }, {product}) => {
 
           <div className='pl-10 border-t border-gray-300 mb-4'>
             <p className='mt-3 font-bold'>
-              By Erkan</p>
+              By Benjamin</p>
             <div className='flex'>
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />
               <img className='w-8' src="../public/image/starGold.png" alt="star_gold" />

@@ -21,7 +21,7 @@ const Pay = () => {
   
     // Título del PDF
     doc.setFontSize(16);
-    doc.text('Comprobante de Compra', 10, 10);
+    doc.text('Receipt', 10, 10);
   
     // Detalles del producto
     doc.setFontSize(12);
@@ -35,27 +35,27 @@ const Pay = () => {
   
     // Total a pagar
     doc.setFontSize(14);
-    doc.text(`Total a pagar: $${total}`, 10, yPosition + 10);
+    doc.text(`Total to pay: $${total}`, 10, yPosition + 10);
   
     // Dirección u otros detalles
     // Puedes agregar más detalles según sea necesario
   
     // Guarda el PDF con un nombre
-    doc.save('comprobante_de_compra.pdf');
+    doc.save('receipt.pdf');
   };
   
   const onSuccess = (details, data) => {
     // Lógica para manejar el pago exitoso
-    console.log('Pago exitoso:', details);
+    console.log('Successful payment:', details);
 
     if (details.status === 'COMPLETED') {
       // La transacción se completó con éxito
-      console.log('Transacción completada con éxito');
+      console.log('Transaction completed successfully');
       setSuccessMessageVisible(true);
       generatePDF(); // Llama a la función para generar el PDF
     } else {
       // La transacción no se completó con éxito
-      console.log('La transacción no se completó con éxito');
+      console.log('The transaction was not completed successfully');
     }
   };
 
